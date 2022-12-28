@@ -1,0 +1,48 @@
+.Card {
+    padding: 3em;
+    border: 2px solid #b6b6b69c;
+    background-clip: border-box;
+    border-radius: 12px;
+    transition: 1s all;
+    cursor: pointer;
+    background-color: var(--card-bg-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all .2s;
+    position: relative;
+    z-index: 2;
+    animation: card 3s infinite;
+}
+
+@keyframes card {
+    0% {
+        margin-bottom: 20px;
+      }
+      50%{
+        margin-bottom: 0px;
+      }
+      100% {
+        margin-bottom: 20px;
+      }
+}
+
+.highlight {
+    position: absolute;
+    height: 200%;
+    width: 100%;
+    /* background-color: #cacbcd29; */
+    background-color: var(--card-reflaction);
+    border-radius: 50%;
+    left: -50%;
+    top:-50%;
+    z-index: -1;
+}
+
+.cardContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}

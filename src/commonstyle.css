@@ -1,0 +1,70 @@
+.fontStyle {
+    color: white;
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+    text-align: left;
+}
+
+.fontTitleStyle {
+    text-decoration: underline;
+    font-size: 1.2em;
+}
+
+.IconContainer {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    margin-inline-end: 20px;
+    transition: all 1s linear;
+    color: white;
+}
+
+.IconContainer:hover {
+    transform:scale(2);
+}
+
+.Icon {
+    height: 2em;
+    width: 2em;
+    animation: Icon-spin 3s infinite;
+}
+
+@keyframes Icon-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+button {
+    padding: 7px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 1s all;
+}
+
+.button:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 105, 180, 0.646);
+}
+
+.board {
+    height: 70%;
+    width: 80%;
+    border: 1px solid #b6b6b69c;
+    background: var(--card-bg-color);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 12px;
+  }

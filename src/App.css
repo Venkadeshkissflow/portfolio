@@ -1,0 +1,283 @@
+@import "./variables.css";
+.App {
+  background-image: var(--bg-color);
+  height: 100vh;
+  overflow: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.backgroundImage {
+  bottom: 0;
+  right: 0;
+  height: 30rem;
+  width: 30rem;
+  position: fixed;
+  z-index: 1;
+  animation: background-image 3s infinite;
+}
+
+.himalayas {
+  background: url("./images/mountains-5689938-removebg.png");
+  background-size: cover;
+}
+
+.forest {
+  background: url("./images/lighthouse.png");
+  background-size: cover;
+}
+
+.ocean {
+  background: url("./images/windmill.png");
+  background-size: cover;
+}
+
+.removed {
+  margin-inline-end: -1000px;
+  transition: all 1s ease;
+}
+
+.live {
+  margin-inline-end: 0;
+  transition: all 1s ease;
+}
+
+@keyframes background-image {
+  0% {
+    bottom: 0;
+    right: 0;
+    }
+    50%{
+      bottom: 10px;
+      right: 10px;
+    }
+    100% {
+      bottom: 0;
+      right: 0;
+    }
+}
+
+/* .moonImage {
+  top: 100px;
+  height: 180px;
+  width: 180px;
+  position: fixed;
+  background: url("./images/moon1.png");
+  background-size: cover;
+  transition: all 1s;
+} */
+
+.moonImage {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-image: radial-gradient(white, rgb(206, 206, 206), white);
+  box-shadow:0 0 44px 11px white;
+  position: fixed;
+  transition: all 1s;
+  animation: moon 5s infinite;
+}
+
+@keyframes moon {
+  0% {
+    top: 100px;
+    right: 100px;
+  }
+  50%{
+    top: 80px;
+    right: 80px;
+  }
+  100% {
+    top: 100px;
+    right: 100px;
+  }
+}
+
+.moonSetUp {
+  margin-inline-start: 70%;
+  transition:margin 1s linear;
+}
+
+.moonSetDown {
+  margin-inline-end: -500px;
+  transition:all 1s linear;
+}
+
+.sun {
+  top: 100px;
+  height: 120px;
+  width: 120px;
+  position: fixed;
+  transition: all 1s;
+  border-radius: 50%;
+  background-image: radial-gradient(#ffd85c, #fec450, #ffa73b);
+  box-shadow: 0 0 25px 10px #ffad00;
+}
+
+.sunSet {
+  margin-inline-start: 70%;
+  transition:margin 1s linear;
+}
+
+.sunSetDown {
+  margin-inline-start: -200px;
+  transition:all 1s linear;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.themeSwitch {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.themeContainer{
+  top:10px;
+  left: 10px;
+  position: fixed;
+  z-index: 5;
+}
+
+.theme1 {
+  height: 50%;
+  width: 50%;
+  background-color: #fec450;
+  border-radius: 100% 0 0;
+  transition: all 1s;
+  animation: theme1 infinite 2s;
+}
+
+@keyframes theme1 {
+  from {
+    background-color: #008500;
+    opacity: .5;
+  }
+  to {
+    background-color: var(--card-bg-color);
+  }
+}
+
+.theme2 {
+  height: 50%;
+  width: 50%;
+  background-color: #008500;
+  border-radius: 0 100% 0 0;
+  transition: all 1s;
+  animation: theme2 infinite 2s;
+  animation-delay: .5s;
+}
+
+@keyframes theme2 {
+  from {
+    background-color: #daab00;
+    opacity: .5;
+  }
+  to {
+    background-color: var(--card-bg-color);
+  }
+}
+
+.theme3 {
+  height: 50%;
+  width: 50%;
+  background-color: #0050b2;
+  border-radius: 0 0 0 100%;
+  transition: all 1s;
+  animation: theme3 infinite 2s;
+  animation-delay: 1.5s;
+}
+
+@keyframes theme3 {
+  from {
+    background-color: #0050b2;
+    opacity: .5;
+  }
+  to {
+    background-color: var(--card-bg-color);
+  }
+}
+
+.theme4{
+  height: 50%;
+  width: 50%;
+  background-color: #ffffff;
+  border-radius: 0 0 100% 0;
+  transition: all 1s;
+  animation: theme4 infinite 2s;
+  animation-delay: 1s;
+}
+
+@keyframes theme4 {
+  from {
+    background-color: white;
+    opacity: .5;
+  }
+  to {
+    background-color: var(--card-bg-color);
+  }
+}
+
+.theme1, .theme2, .theme3,.theme4 {
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.theme1:hover, .theme2:hover,.theme3:hover, .theme4:hover {
+  transform: scale(1.2);
+}
+
+.theme1:hover {
+  background-color: #065600;
+  border: .5px solid white;
+  opacity: .4;
+}
+
+.theme2:hover {
+  background-color: #daab00;
+  border: .5px solid white;
+  opacity: .4;
+}
+
+.theme3:hover {
+  background-color: #ffffff;
+  border: .5px solid white;
+  opacity: .4;
+}
+
+.theme4:hover {
+  background-color: #007da0b3;
+  border: .5px solid white;
+  opacity: .4;
+}
+
+.themeBox {
+  background-color: var(--card-bg-color);
+  transition: all 0.3s ease;
+  border: .5px solid var(--transparent-border-color);
+}
+
+.centrPart {
+  height: 30px;
+  width: 30px;
+  background-color: rgba(116, 116, 116, 0.74);
+  border-radius: 50%;
+  position: absolute;
+  border: 1px solid white;
+}

@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+
+.homeScrean {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    flex-wrap: wrap-reverse;
+}
+
+.cardPart, .profileArea {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+}
+
+.homeScreenCard {
+    align-self:center;
+    max-width: 30rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 15rem;
+}
+
+.homeScreenfonts {
+    margin: 0px;
+    font-size: 1em;
+}
+
+.name {
+    font-size: 2em;
+}
+
+.button {
+    width: fit-content;
+    margin-block-start: 8px;
+}
+
+.profilepic {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px 5px var(--shadow-color);
+}
+
+.image {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+/* .cardForProfile {
+    border-radius: 50%;
+    padding: 12px;
+} */

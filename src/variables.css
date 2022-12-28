@@ -1,0 +1,73 @@
+:root {
+    /* --bg-color: linear-gradient(#212148, #2e172e, #002331); */
+    --bg-color:black;
+    --card-bg-color: #0a27462e;
+    --transparent-bg-color: #a4a4a32e;
+    --transparent-border-color:#d4d4d491;
+    --shadow-color: #434343;
+    --card-reflaction: #000f2d;
+    --wire-color: white;
+    --board-border: #745738;
+    --board-background-color: radial-gradient(#191919, black, black);
+    --bulb-handle-color: black
+}
+
+@media screen {
+body.dark {
+    --transparent-bg-color:rgba(255, 255, 255, 0.05);
+    --bg-color: radial-gradient(circle at 100% 0%,#034c6e 25%, #00132f 75%);
+    /* --bg-color: linear-gradient(#855988, #2B2F77, #070B34); */
+    /* --bg-color:#00122c; */
+    --card-bg-color: #0a27462e;
+    --card-reflaction: #000f2d;
+    --wire-color: white;
+    --board-border: #745738;
+    --board-background-color: radial-gradient(#191919, black, black)
+}
+}
+
+@media screen {
+body.light {
+    --bg-color: linear-gradient(#00646e 45%, rgb(0 237 221 / 10%));
+    /* --bg-color:#095071; */
+    --card-bg-color: #0a27462e;
+    --transparent-bg-color: #a4a4a32e;
+    --transparent-border-color:#d4d4d491;
+    --card-reflaction: #000f2d;
+    --wire-color: rgb(255, 255, 255);
+    --board-border: #bb8d5b;
+    --board-background-color: radial-gradient(#2f5b45, #034f29, #034f29);
+}
+}
+
+@media screen {
+    body.himalayasbackground {
+        --bg-color: linear-gradient(#00646e 45%, rgb(0 237 221 / 10%));
+        --card-bg-color: #0a27462e;
+        --card-reflaction: #000f2d;
+    }
+}
+
+@media screen {
+    body.forestbackground {
+        --bg-color: linear-gradient(#337138 45%, rgb(171 225 176));
+        --card-bg-color: #0a27462e;
+        --card-reflaction:#0d4500;
+    }
+}
+
+@media screen {
+    body.oceanbackground {
+        --bg-color: linear-gradient(#bc438d 45%, rgb(146 122 144));
+        --card-bg-color: #0a27462e;
+        --card-reflaction:#7f0b4e;
+    }
+}
+
+@media screen {
+    body.desertbackground {
+        --bg-color: radial-gradient(circle at 100% 0%,#ffa400 25%, #ffe5b5 75%);
+        --card-bg-color: #0a27462e;
+        --card-reflaction:#3e1313;
+    }
+}
