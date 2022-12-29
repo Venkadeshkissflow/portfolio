@@ -79,7 +79,6 @@ export function SelfExplore({mobileResolution=false}){
   // useEffect(function initRenderer(){
   //    mobileResolution = swiperRef.current.clientWidth < WEB_MIN_WIDTH;
   // }, [])
-debugger;
     return (
     <div className="selfexplorerSection">
       {mobileResolution ? <MobileSwiper/> : <WebResponsiveSwiper/>}
@@ -95,15 +94,15 @@ function MobileSwiper(){
     modules={[EffectCards]}
     className="mySwiper"
   >
-    <SwiperSlide>Slide 1</SwiperSlide>
-    <SwiperSlide>Slide 2</SwiperSlide>
-    <SwiperSlide>Slide 3</SwiperSlide>
-    <SwiperSlide>Slide 4</SwiperSlide>
-    <SwiperSlide>Slide 5</SwiperSlide>
-    <SwiperSlide>Slide 6</SwiperSlide>
-    <SwiperSlide>Slide 7</SwiperSlide>
-    <SwiperSlide>Slide 8</SwiperSlide>
-    <SwiperSlide>Slide 9</SwiperSlide>
+    {SELF_DETAILS.map((data, index)=>(
+          <SwiperSlide className="board">
+          <img className="mobileResponsiveImg" alt={data.title} src={data.img} />
+          <div className="content">
+          <div className="fontStyle fontTitleStyle">{data.title}</div>
+          <div className="fontStyle">{data.detailInfo}</div> 
+          </div>
+          </SwiperSlide>
+    ))}
   </Swiper> 
   )
 }

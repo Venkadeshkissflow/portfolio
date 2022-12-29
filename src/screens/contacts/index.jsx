@@ -28,7 +28,6 @@ const CONTACT_MEDIAS = [
 ]
 
 function IconEvent(icon){
-    debugger;
     switch (icon) {
         case "AiOutlineTwitter":
             return <AiOutlineTwitter className="mediaIcon" />
