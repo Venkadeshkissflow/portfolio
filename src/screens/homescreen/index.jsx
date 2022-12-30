@@ -6,9 +6,9 @@ import ProfilePic from "../../images/profilepic.jpg"
 import "./styles.css";
 import "../../commonstyle.css"
 
-export function HomeScreen(){
+export const HomeScreen = React.forwardRef((props, ref) => {
     return(
-        <div className="homeScrean">
+        <div ref={ref} className="homeScrean">
             <Card className="homeScreenCard">
                 <div className="profileInfo">
                 <p className="fontStyle homeScreenfonts about"> Haii 👋, I'm</p>
@@ -20,4 +20,4 @@ export function HomeScreen(){
             </Card>
         </div>
     )
-}
+})

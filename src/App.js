@@ -99,6 +99,10 @@ function BackgroundImage({theme}){
 
 function App() {
     const swiperRef = useRef(null);
+    const homeRef = useRef(null);
+    const aboutRef = useRef(null);
+    const acheivementsRef = useRef(null);
+    const contactRef = useRef(null); 
 
     const[location, setLocation] = useState(THEME_LOCATION.HIMALAYAS);
     const [mobileResolution, setMobileResolution] = useState(false)
@@ -120,15 +124,41 @@ function App() {
       bodyContainer.classList.add(`${theme}background`);
     }
 
+    // function homeEvent(){
+    //   console.log("Home");
+    //   homeRef.current.scrollIntoView({behavior: 'smooth'});
+    // }
+
+    // function callAboutScreen(){
+    //   console.log("about");
+    //   aboutRef.current.scrollIntoView({behavior: 'smooth'});
+    // }
+
+    function screenNavigations(refValue){
+      console.log([refValue], "ref");
+      switch(refValue){
+        case "homeRef": 
+         return homeRef.current.scrollIntoView({behavior: "smooth"});
+        case "aboutRef": 
+         return aboutRef.current.scrollIntoView({behavior: "smooth"});
+        case "acheivementsRef": 
+         return acheivementsRef.current.scrollIntoView({behavior: "smooth"});
+        case "contactRef": 
+         return contactRef.current.scrollIntoView({behavior: "smooth"});
+        default:
+          return homeRef.current.scrollIntoView({behavior: "smooth"});
+      } 
+    }
+
   return (
     <div ref={swiperRef} className={`App`}>
-            <HeaderComponent/>
-      <HomeScreen />
-      {/* <SkillsScreen/> */}
-      {/* <ProjectScreen /> */}
-      <AboutScreen />
-      {<SelfExplore mobileResolution={mobileResolution} />}
-      <ContactScreen />
+      <HeaderComponent
+        screenNavigations={screenNavigations}
+      />
+      <HomeScreen ref={homeRef} />
+      <AboutScreen ref={aboutRef} />
+      <SelfExplore ref={acheivementsRef} mobileResolution={mobileResolution} />
+      <ContactScreen ref={contactRef} />
       <Snowfall
             style={{
                 position: 'fixed',
@@ -136,7 +166,6 @@ function App() {
                 height: '100vh'
             }}
         />
-        {/* <div className={`moonImage ${theme === "light" ? "moonSetDown" : "moonSetUp"}`}/> */}
         <div className={`moonImage ${theme === THEME.LIGHT ? "moonSetDown" : "moonSetUp"}`}></div>
         <div className={`sun ${theme === THEME.LIGHT ? "sunSet" : "sunSetDown"}`}/>
         <BackgroundImage theme={location} />

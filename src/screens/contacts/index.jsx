@@ -42,7 +42,7 @@ function IconEvent(icon){
     }
 }
 
-export function ContactScreen(){
+export const ContactScreen = React.forwardRef((props, ref)=>{
 
     const [hoverStategithub, setHoverStategithub] = useState({state: false, color: "white"});
     const [hoverStatelinkedin, setHoverStatelinkedin] = useState({state: false, color: "white"});
@@ -54,7 +54,7 @@ export function ContactScreen(){
     }
 
     return (
-        <div className="contactBoard">
+        <div ref={ref} className="contactBoard">
             <div className="board">
                             {/* one */}
                             <div className="bulbBox">
@@ -175,4 +175,4 @@ export function ContactScreen(){
             </div>
         </div>
     )
-}
+})

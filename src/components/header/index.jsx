@@ -3,16 +3,17 @@ import React, {useState, useLayoutEffect} from "react";
 import {themeStore} from "../../store/index"
 
 import HomeIcon from "../../images/home1.png";
-import AboutIcon from "../../images/Search3.jpeg";
+import AboutIcon from "../../images/aboutnew.jpeg";
 import ContactIcon from "../../images/Contact.png";
 import MoonIcon from "../../images/moonicon.png";
 import SunIcon from "../../images/SunIcon1.png";
+import AcheivementIcon from "../../images/achievement.webp"
 
 import "./styles.css";
 import "../../commonstyle.css"
 
-export function HeaderComponent(){
-    const [mouseHover, setMouseHover]=useState(false);
+export function HeaderComponent({screenNavigations, callAboutScreen, callContactScreen}){
+    const [mouseHover, setMouseHover]=useState(true);
     const theme = themeStore((state) => state.theme);
     const setTheme = themeStore((state)=>state.setTheme);
     const bodyContainer = document.querySelector("body");
@@ -42,26 +43,26 @@ export function HeaderComponent(){
 
     return (
         <div onMouseOver={onMouseHover} onMouseLeave={onMouseLeave} className="outerContainer">
-        <div className={`${mouseHover ? "visible" : "hidden"} headerOuterContainer`}>
+            <div className={`${mouseHover ? "visible" : "hidden"} headerOuterContainer`}>
                 <div className={`${mouseHover ? "visibleProfile" : "hiddenProfile"} profileIcon headerButton fontStyle`}/> 
                 <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
-                    window.location="/"
+                    // window.location="/" 
+                    screenNavigations("homeRef")
                 }}>
                     <img alt="" className="icon" src={HomeIcon} />
                 </div>
                 <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
-                    window.location="/about"
+                    screenNavigations("aboutRef")
                 }}>
                     <img alt="" className="icon" src={AboutIcon} />
                 </div>
-                {/* <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
-                    window.location="/projects"
-                }}/> */}
-                {/* <div className="headerButton" onClick={()=>{
-                    window.location="/about"
-                }}>Profile</div> */}
                 <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
-                    window.location="/contact"
+                    screenNavigations("acheivementsRef")
+                }}>
+                    <img alt="" className="icon" src={AcheivementIcon} />
+                </div>
+                <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
+                    screenNavigations("contactRef")
                 }}>
                     <img alt="" className="icon" src={ContactIcon} />
                 </div>
@@ -71,7 +72,7 @@ export function HeaderComponent(){
                         <img alt="themeIconMoon" className="themeIcon icon" src={MoonIcon}/>
                     }
                 </div>
-        </div>
+            </div>
         </div>
     )
 }

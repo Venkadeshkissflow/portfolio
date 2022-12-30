@@ -72,7 +72,7 @@ const SELF_DETAILS = [
 },
 ]
 
-export function SelfExplore({mobileResolution=false}){
+export const SelfExplore = React.forwardRef(({mobileResolution=false}, ref)=>{
   // const swiperRef = useRef(null);
   // const WEB_MIN_WIDTH = 550;
   // let mobileResolution;
@@ -80,11 +80,11 @@ export function SelfExplore({mobileResolution=false}){
   //    mobileResolution = swiperRef.current.clientWidth < WEB_MIN_WIDTH;
   // }, [])
     return (
-    <div className="selfexplorerSection">
+    <div ref={ref} className="selfexplorerSection">
       {mobileResolution ? <MobileSwiper/> : <WebResponsiveSwiper/>}
     </div>
     )
-}
+})
 
 function MobileSwiper(){
   return (

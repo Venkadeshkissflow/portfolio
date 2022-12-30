@@ -13,9 +13,9 @@ import {FaCss3Alt} from "react-icons/fa"
 import "./styles.css";
 import "../../commonstyle.css"
 
-export function AboutScreen(){
+export const AboutScreen = React.forwardRef((props, ref)=>{
     return(
-        <div className="aboutScreenContainer">
+        <div ref={ref} className="aboutScreenContainer">
             <Card className="aboutScreenCard">
             <div>
                 <p className="fontStyle fontTitleStyle">About</p>
@@ -76,4 +76,4 @@ export function AboutScreen(){
             </Card>
         </div>
     )
-}
+})
