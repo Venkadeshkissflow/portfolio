@@ -154,6 +154,7 @@ function App() {
 
   return (
     <div ref={swiperRef} className={`App`}>
+      <div className="screensWrapper">
       <HeaderComponent
         screenNavigations={screenNavigations}
         mobileResolution={mobileResolution}
@@ -169,6 +170,7 @@ function App() {
                 height: '100vh'
             }}
         />
+      </div>
         <div className={`moonImage ${theme === THEME.LIGHT ? "moonSetDown" : "moonSetUp"}`}></div>
         <div className={`sun ${theme === THEME.LIGHT ? "sunSet" : "sunSetDown"}`}/>
         <BackgroundImage theme={location} />

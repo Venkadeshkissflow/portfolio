@@ -148,10 +148,15 @@
 }
 
 .themeContainer{
-  top:10px;
+  bottom:10px;
   left: 10px;
   position: fixed;
+  z-index: 13;
+}
+
+.screensWrapper {
   z-index: 5;
+  position: relative;
 }
 
 .theme1 {
