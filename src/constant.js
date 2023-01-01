@@ -9,3 +9,10 @@ export const THEME_LOCATION = {
     HIMALAYAS: "himalayas",
     DESERT: "desert"
 }
+
+export const SCREEN = {
+    HOME: "home",
+    ABOUT: "about",
+    ACHEIVMENTS: "acheivments",
+    CONTACT: "contact"
+}

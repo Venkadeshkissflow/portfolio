@@ -66,7 +66,7 @@ body.light {
 
 @media screen {
     body.desertbackground {
-        --bg-color: radial-gradient(circle at 100% 0%,#ffa400 25%, #ffe5b5 75%);
+        --bg-color: radial-gradient(circle at 100% 0%,#ffe5b5 25%,#ffa400 75%);
         --card-bg-color: #0a27462e;
         --card-reflaction:#3e1313;
     }

@@ -1,8 +1,8 @@
-import React, {useState, useEffect, useRef, useLayoutEffect} from "react";
+import React, {useState, useRef, useLayoutEffect} from "react";
 import Snowfall from 'react-snowfall'
 
 import {themeStore} from "../src/store/index";
-import {THEME, THEME_LOCATION} from "./constant.js"
+import {THEME, THEME_LOCATION, SCREEN} from "./constant.js"
 
 import './App.css';
 
@@ -12,7 +12,7 @@ import {HomeScreen} from "../src/screens/homescreen/index";
 import {AboutScreen} from "../src/screens/aboutscreen/index";
 import {HeaderComponent} from "../src/components/header/index";
 import {ContactScreen} from "../src/screens/contacts/index";
-import {SelfExplore} from "../src/screens/Acheivements_and_hobbies/index"
+import {SelfExplore} from "../src/screens/Acheivements_and_hobbies/index";
 
 // function BackgroundImage({theme}){
 //   console.log(theme)
@@ -75,7 +75,7 @@ function BackgroundImage({theme}){
            ${theme !== THEME_LOCATION.FOREST ? "removed" : "live" } 
            backgroundImage
         `}/>
-             <div 
+         <div 
          className={`
          ${THEME_LOCATION.HIMALAYAS} 
          ${theme !== THEME_LOCATION.HIMALAYAS ? "removed" : "live" } 
@@ -122,6 +122,8 @@ function App() {
       setLocation(theme);
       bodyContainer.className = ""
       bodyContainer.classList.add(`${theme}background`);
+      bodyContainer.classList.add(THEME.LIGHT);
+      setTheme(THEME.LIGHT)
     }
 
     // function homeEvent(){
@@ -137,13 +139,13 @@ function App() {
     function screenNavigations(refValue){
       console.log([refValue], "ref");
       switch(refValue){
-        case "homeRef": 
+        case SCREEN.HOME: 
          return homeRef.current.scrollIntoView({behavior: "smooth"});
-        case "aboutRef": 
+        case SCREEN.ABOUT: 
          return aboutRef.current.scrollIntoView({behavior: "smooth"});
-        case "acheivementsRef": 
+        case SCREEN.ACHEIVMENTS: 
          return acheivementsRef.current.scrollIntoView({behavior: "smooth"});
-        case "contactRef": 
+        case SCREEN.CONTACT: 
          return contactRef.current.scrollIntoView({behavior: "smooth"});
         default:
           return homeRef.current.scrollIntoView({behavior: "smooth"});

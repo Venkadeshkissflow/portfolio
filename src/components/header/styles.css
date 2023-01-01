@@ -20,6 +20,7 @@
     height: 4rem;
     transition: all .2s linear;
     transform: scale(1.2);
+    max-width: 75%;
 }
 
 .hidden {
@@ -31,7 +32,7 @@
     height: 2.5rem;
     transition-delay: .3s;
     transition: all .1s linear;
-    padding: 5px
+    padding: 0px
 }
 
 .hiddenButton, .hiddenProfile {
@@ -62,6 +63,13 @@
     display: flex;
     align-items: center;
     justify-self: center;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 600px){
+    .headerButton {
+        margin-inline:5px;
+    }
 }
 
 .theme {
@@ -80,18 +88,17 @@
 
 .icon {
     background-size: cover;
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 100%;
     flex: 1;
-    border-radius: 12px;
 }
 
 .visibleProfile::after {
     content: '';
     height: 3rem;
     width: 1px;
-    background-color: aliceblue;
+    background-color: var(--transparent-border-color);
     position: absolute;
-    left: 60px;
+    left: 13%;
     margin: 10px
 }
