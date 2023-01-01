@@ -162,7 +162,7 @@ function App() {
       <HomeScreen ref={homeRef} />
       <AboutScreen ref={aboutRef} />
       <SelfExplore ref={acheivementsRef} mobileResolution={mobileResolution} />
-      <ContactScreen ref={contactRef} />
+      <ContactScreen ref={contactRef} mobileResolution={mobileResolution} />
       <Snowfall
             style={{
                 position: 'fixed',

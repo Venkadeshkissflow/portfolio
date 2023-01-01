@@ -43,6 +43,7 @@ function IconEvent(icon){
 }
 
 export const ContactScreen = React.forwardRef((props, ref)=>{
+    const {mobileResolution} = props;
 
     const [hoverStategithub, setHoverStategithub] = useState({state: false, color: "white"});
     const [hoverStatelinkedin, setHoverStatelinkedin] = useState({state: false, color: "white"});
@@ -60,7 +61,17 @@ export const ContactScreen = React.forwardRef((props, ref)=>{
                             <div className="bulbBox">
                             <div className="wire"/>
                             <div className="bulbHandler"/>
-                            <div style={hoverStatetwitter.state ? {boxShadow: `0 0 100px 100px ${hoverStatetwitter.color}`, backgroundImage: `radial-gradient(#fff1c0, ${hoverStatetwitter.color})`} : {}} className="bulb twitterBulb"/>
+                            <div 
+                                style={
+                                    hoverStatetwitter.state ? 
+                                        {
+                                            boxShadow: `0 0 100px 100px ${hoverStatetwitter.color}`, 
+                                            backgroundImage: `radial-gradient(#fff1c0, ${hoverStatetwitter.color})`
+                                        }
+                                             : 
+                                        {}
+                                    } 
+                                className={`bulb twitterBulb ${mobileResolution ? "blinkingTwitter" : ""}`}/>
                             {/* <div className="lightShade"/> */}
                             {/* {hoverStatetwitter.state && (
                                 <div className="trapezoid">
@@ -89,7 +100,13 @@ export const ContactScreen = React.forwardRef((props, ref)=>{
                             <div className="bulbBox">
                             <div className="wire"/>
                             <div className="bulbHandler"/>
-                            <div style={hoverStatelinkedin.state ? {boxShadow: `0 0 100px 80px ${hoverStatelinkedin.color}`, backgroundImage: `radial-gradient(#fff1c0, #ff43a6)`} : {}} className="bulb"/>
+                            <div style={
+                                    hoverStatelinkedin.state ? {boxShadow: `0 0 100px 80px ${hoverStatelinkedin.color}`, 
+                                    backgroundImage: `radial-gradient(#fff1c0, #ff43a6)`
+                                }   
+                                    :  
+                                {}
+                                } className={`bulb ${mobileResolution ? "blinkingLinkedin" : ""}`}/>
                             {/* <div style={{backgroundColor: `${hoverStatelinkedin.color}`, zIndex: 1}} className="bulb"/> */}
                             {/* <div className="lightShade"/> */}
                             {/* {hoverStatelinkedin.state && (
@@ -119,7 +136,8 @@ export const ContactScreen = React.forwardRef((props, ref)=>{
                             <div className="bulbBox">
                             <div className="wire"/>
                             <div className="bulbHandler"/>
-                            <div style={hoverStatemail.state ? {boxShadow: `0 0 100px 70px ${hoverStatemail.color}`, backgroundImage: `radial-gradient(#fff1c0, #ffbe00)`} : {}} className="bulb"/>
+                            <div style={hoverStatemail.state ? {boxShadow: `0 0 100px 70px ${hoverStatemail.color}`, backgroundImage: `radial-gradient(#fff1c0, #ffbe00)`} : {}} 
+                            className={`bulb ${mobileResolution ? "blinkingMail" : ""}`}/>
                             {/* <div style={{backgroundColor: `${hoverStatemail.color}`, zIndex: 1}} className="bulb"/> */}
                             {/* <div className="lightShade"/> */}
                             {/* {hoverStatemail.state && (
@@ -148,7 +166,8 @@ export const ContactScreen = React.forwardRef((props, ref)=>{
                             <div className="bulbBox">
                             <div className="wire"/>
                             <div className="bulbHandler"/>
-                            <div style={hoverStategithub.state ? {boxShadow: `0 0 100px 80px ${hoverStategithub.color}`, backgroundImage: `radial-gradient(#fff1c0, #5bff4b)`} : {}} className="bulb"/>
+                            <div style={hoverStategithub.state ? {boxShadow: `0 0 100px 80px ${hoverStategithub.color}`, backgroundImage: `radial-gradient(#fff1c0, #5bff4b)`} : {}} 
+                            className={`bulb ${mobileResolution ? "blinkingGithub" : ""}`} />
                             {/* <div style={{backgroundColor: `${hoverStategithub.color}`, zIndex: 1}} className="bulb"/> */}
                             {/* <div className="lightShade"/> */}
                             {/* {hoverStategithub.state && (
