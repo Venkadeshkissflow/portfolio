@@ -14,7 +14,7 @@ import Logo from "../../images/logo.png";
 import "./styles.css";
 import "../../commonstyle.css"
 
-export function HeaderComponent({screenNavigations}){
+export function HeaderComponent({screenNavigations, mobileResolution}){
     const [mouseHover, setMouseHover]=useState(true);
     const theme = themeStore((state) => state.theme);
     const setTheme = themeStore((state)=>state.setTheme);
@@ -25,10 +25,14 @@ export function HeaderComponent({screenNavigations}){
     }, [])
 
     function onMouseHover(){
-        setMouseHover(true)
+        if(!mobileResolution){
+            setMouseHover(true)
+        }
     }
     function onMouseLeave(){
-        setMouseHover(false)
+        if(!mobileResolution){
+            setMouseHover(false)
+        }
     }
 
     function setThemeEvent(){

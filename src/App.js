@@ -156,6 +156,7 @@ function App() {
     <div ref={swiperRef} className={`App`}>
       <HeaderComponent
         screenNavigations={screenNavigations}
+        mobileResolution={mobileResolution}
       />
       <HomeScreen ref={homeRef} />
       <AboutScreen ref={aboutRef} />
