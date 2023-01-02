@@ -13,13 +13,13 @@ import ArtCertificate from "../../images/certificateArt.png"
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "./styles.css";
 import "swiper/css/effect-cards";
-import "swiper/css/bundle"
+// import "swiper/css/bundle"
+import "./styles.css";
 
 import "../../commonstyle.css"
 
-import { EffectCoverflow, Keyboard , Navigation, Autoplay, Mousewheel, EffectFade, EffectCards } from "swiper";
+import { EffectCoverflow, Pagination, Keyboard , Navigation, Autoplay, Mousewheel, EffectFade, EffectCards } from "swiper";
 
 const SELF_DETAILS = [
 {
