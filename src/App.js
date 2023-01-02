@@ -7,64 +7,11 @@ import {THEME, THEME_LOCATION, SCREEN} from "./constant.js"
 import './App.css';
 
 import {HomeScreen} from "../src/screens/homescreen/index";
-// import {ProjectScreen} from "../src/screens/projects/index";
-// import {SkillsScreen} from "../src/screens/skillscreen/index";
 import {AboutScreen} from "../src/screens/aboutscreen/index";
 import {HeaderComponent} from "../src/components/header/index";
 import {ContactScreen} from "../src/screens/contacts/index";
 import {SelfExplore} from "../src/screens/Acheivements_and_hobbies/index";
 
-// function BackgroundImage({theme}){
-//   console.log(theme)
-//   switch(theme){
-//     case THEME_LOCATION.FOREST: 
-//       return (
-//         <>
-//           <div 
-//           className={`
-//           ${THEME_LOCATION.FOREST} 
-//           ${theme !== THEME_LOCATION.FOREST ? "removed" : "" } 
-//           backgroundImage
-//           `}/>
-//         </>
-//       );
-//     case THEME_LOCATION.HIMALAYAS:
-//       return (
-//         <div 
-//         className={`
-//         ${THEME_LOCATION.HIMALAYAS} 
-//         ${theme !== THEME_LOCATION.HIMALAYAS ? "removed" : "" } 
-//         backgroundImage
-//         `}/>
-//       )
-//     case THEME_LOCATION.OCEAN:
-//       return(
-//         <div 
-//         className={`
-//         ${THEME_LOCATION.OCEAN} 
-//         ${theme !== THEME_LOCATION.OCEAN ? "removed" : "" } 
-//         backgroundImage
-//         `}></div>
-//       )
-//     case THEME_LOCATION.DESERT:
-//       return(
-//         <div 
-//         className={`
-//         ${THEME_LOCATION.DESERT}
-//         ${theme !== THEME_LOCATION.DESERT ? "removed" : "" }  
-//         backgroundImage
-//         `}></div>
-//       )
-//     default:
-//         return (
-//           <div 
-//           className={`
-//           ${THEME_LOCATION.HIMALAYAS} 
-//           backgroundImage
-//           `}></div>
-//         )
-//   }
-// }
 
 function BackgroundImage({theme}){
   return(
@@ -125,16 +72,6 @@ function App() {
       bodyContainer.classList.add(THEME.LIGHT);
       setTheme(THEME.LIGHT)
     }
-
-    // function homeEvent(){
-    //   console.log("Home");
-    //   homeRef.current.scrollIntoView({behavior: 'smooth'});
-    // }
-
-    // function callAboutScreen(){
-    //   console.log("about");
-    //   aboutRef.current.scrollIntoView({behavior: 'smooth'});
-    // }
 
     function screenNavigations(refValue){
       console.log([refValue], "ref");

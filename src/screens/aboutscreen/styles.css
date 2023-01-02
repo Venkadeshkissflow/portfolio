@@ -1,6 +1,5 @@
 .aboutScreenContainer {
     height: 100vh;
-    /* background-image: url('../../../src/images/forest-images/Forest_landscape_generated.jpg'); */
     background-size: cover;
     display: flex;
     align-items: center;
