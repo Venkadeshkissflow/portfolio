@@ -1,4 +1,4 @@
-import React, {useRef, useLayoutEffect, useState} from "react";
+import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -19,7 +19,7 @@ import "./styles.css";
 
 import "../../commonstyle.css"
 
-import { EffectCoverflow, Pagination, Keyboard , Navigation, Autoplay, Mousewheel, EffectFade, EffectCards } from "swiper";
+import { EffectCoverflow, Keyboard , Navigation, Autoplay, Mousewheel, EffectFade, EffectCards } from "swiper";
 
 const SELF_DETAILS = [
 {
@@ -30,13 +30,6 @@ const SELF_DETAILS = [
   role: "Frontend Developer"
 
 },
-// {
-//   title: "KNCETians [ REACT NATIVE ]",
-//   img:"https://swiperjs.com/demos/images/nature-1.jpg",
-//   detailInfo:"In this Mobile Application which is used for building connectivity between Alumni and the college.",
-//   tools: "VS Code, Postman , MongoDB Cloud",
-//   role: "Frontend Developer"
-// },
 {
   title: "Chat App [ Socket io ]",
   img: chat,
@@ -72,12 +65,6 @@ const SELF_DETAILS = [
 ]
 
 export const SelfExplore = React.forwardRef(({mobileResolution=false}, ref)=>{
-  // const swiperRef = useRef(null);
-  // const WEB_MIN_WIDTH = 550;
-  // let mobileResolution;
-  // useEffect(function initRenderer(){
-  //    mobileResolution = swiperRef.current.clientWidth < WEB_MIN_WIDTH;
-  // }, [])
     return (
     <div ref={ref} className="selfexplorerSection">
       {mobileResolution ? <MobileSwiper/> : <WebResponsiveSwiper/>}

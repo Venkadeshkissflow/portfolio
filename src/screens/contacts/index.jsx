@@ -88,7 +88,7 @@ export const ContactScreen = React.forwardRef((props, ref)=>{
                             <div className="wire"/>
                             <div className="bulbHandler"/>
                             <div style={hoverStategithub.state ? {boxShadow: `0 0 100px 80px ${hoverStategithub.color}`, backgroundImage: `radial-gradient(#fff1c0, #5bff4b)`} : {}} 
-                            className={`bulb ${mobileResolution ? "blinkingGithub" : ""}`} />ß
+                            className={`bulb ${mobileResolution ? "blinkingGithub" : ""}`} />
                             <div 
                             className="mediaBox" 
                             onClick={()=>openInNewTab("https://github.com/Venkadeshkissflow")}
