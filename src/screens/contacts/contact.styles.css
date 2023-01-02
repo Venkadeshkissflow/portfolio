@@ -64,15 +64,14 @@
 
 .blinkingTwitter {
   animation: twitterBulb infinite .5s;
-  /* transition: all 1s; */
 }
 
 @keyframes twitterBulb {
-  from {
+  0% {
     box-shadow: white;
     background-image: white
   }
-  to {
+  100% {
     box-shadow: 0 0 20px 20px #1ca2f1;
     background-image: radial-gradient(#fff1c0, #1ca2f1)
   }
@@ -81,45 +80,68 @@
 .blinkingLinkedin {
   transition: all 1s;
   animation: linkedinBulb infinite .5s;
-  animation-delay: 2.5s;
 }
 
 @keyframes linkedinBulb {
-  from {
-    box-shadow: white;
-    background-image: white
-  }
-  to {
+  0% {
     box-shadow: 0 0 20px 20px #ff3d9cf5;
     background-image: radial-gradient(#fff1c0, #ff3d9cf5)
   }
+  50% {
+    box-shadow: white;
+    background-image: white
+  }
+  100% {
+    box-shadow: white;
+    background-image: white
+  }
 }
 
-/* .blinkingMail {
+.blinkingMail {
   animation: mailBulb infinite .5s;
-  animation-delay: 1.5s;
 }
 
 @keyframes mailBulb {
-  from {
-    background-color: white;
+  0% {
+    box-shadow: white;
+    background-image: white
   }
-  to {
+  25% {
     box-shadow: 0 0 20px 20px #f1a638;
     background-image: radial-gradient(#fff1c0, #f1a638)
+  }
+  75% {
+    box-shadow: white;
+    background-image: white
+  }
+  100% {
+    box-shadow: white;
+    background-image: white
   }
 }
 .blinkingGithub {
   animation: githubBulb infinite .5s;
-  animation-delay: 2s;
 }
 
 @keyframes githubBulb {
-  from {
-    background-color: white;
+  0% {
+    box-shadow: white;
+    background-image: white
   }
-  to {
+  25% {
+    box-shadow: white;
+    background-image: white
+  }
+  50%{
     box-shadow: 0 0 20px 20px #3cff5a;
     background-image: radial-gradient(#fff1c0, #3cff5a)
   }
-} */
+  75% {
+    box-shadow: white;
+    background-image: white
+  }
+  100% {
+    box-shadow: white;
+    background-image: white
+  }
+}
