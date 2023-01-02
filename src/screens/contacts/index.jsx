@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import Shape from 'react-clip-path';
 
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiOutlineMail } from "react-icons/ai";
@@ -7,40 +6,6 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 
 import "./contact.styles.css"
-
-const CONTACT_MEDIAS = [
-    {
-        name: "Twitter",
-        icon: "AiOutlineTwitter"
-    },
-    {
-        name: "LinkedIn",
-        icon: "AiOutlineLinkedin"
-    },
-    {
-        name: "Mail",
-        icon: "AiOutlineMail"
-    },
-    {
-        name: "Github",
-        icon: "AiOutlineGithub"
-    }
-]
-
-function IconEvent(icon){
-    switch (icon) {
-        case "AiOutlineTwitter":
-            return <AiOutlineTwitter className="mediaIcon" />
-        case "AiOutlineLinkedin": 
-            return <AiOutlineLinkedin className="mediaIcon"/>
-        case "AiOutlineMail": 
-            return <AiOutlineMail className="mediaIcon"/>
-        case "AiOutlineGithub": 
-            return <AiOutlineGithub className="mediaIcon"/>
-        default: 
-        return "haii";
-    }
-}
 
 export const ContactScreen = React.forwardRef((props, ref)=>{
     const {mobileResolution} = props;
@@ -72,20 +37,6 @@ export const ContactScreen = React.forwardRef((props, ref)=>{
                                         {}
                                     } 
                                 className={`bulb twitterBulb ${mobileResolution ? "blinkingTwitter" : ""}`}/>
-                            {/* <div className="lightShade"/> */}
-                            {/* {hoverStatetwitter.state && (
-                                <div className="trapezoid">
-                                    <Shape
-                                        // name="Trapezoid"
-                                        id="trapezoid"
-                                        backgroundColor="#bd34f14d"
-                                        width="150px"
-                                        height="200px"
-                                        formula="polygon(44% 0%,55% 0%,100% 100%,0% 100%)"
-                                    />
-                                </div>
-                            )
-                            } */}
                             <div 
                             className="mediaBox" 
                             onClick={()=>openInNewTab("https://twitter.com/Venkade20226949?t=ZEz7CgBuTKvxC6aI9hVmNA&s=09")}
@@ -107,21 +58,6 @@ export const ContactScreen = React.forwardRef((props, ref)=>{
                                     :  
                                 {}
                                 } className={`bulb ${mobileResolution ? "blinkingLinkedin" : ""}`}/>
-                            {/* <div style={{backgroundColor: `${hoverStatelinkedin.color}`, zIndex: 1}} className="bulb"/> */}
-                            {/* <div className="lightShade"/> */}
-                            {/* {hoverStatelinkedin.state && (
-                                <div className="trapezoid">
-                                    <Shape
-                                        // name="Trapezoid"
-                                        id="trapezoid"
-                                        backgroundColor="#007fa27d"
-                                        width="150px"
-                                        height="200px"
-                                        formula="polygon(44% 0%,55% 0%,100% 100%,0% 100%)"
-                                    />
-                                </div>
-                            )
-                            } */}
                             <div 
                             className="mediaBox" 
                             onClick={()=>openInNewTab("https://www.linkedin.com/in/venkadesh-s-sakthivel")}
@@ -138,21 +74,6 @@ export const ContactScreen = React.forwardRef((props, ref)=>{
                             <div className="bulbHandler"/>
                             <div style={hoverStatemail.state ? {boxShadow: `0 0 100px 70px ${hoverStatemail.color}`, backgroundImage: `radial-gradient(#fff1c0, #ffbe00)`} : {}} 
                             className={`bulb ${mobileResolution ? "blinkingMail" : ""}`}/>
-                            {/* <div style={{backgroundColor: `${hoverStatemail.color}`, zIndex: 1}} className="bulb"/> */}
-                            {/* <div className="lightShade"/> */}
-                            {/* {hoverStatemail.state && (
-                                <div className="trapezoid">
-                                    <Shape
-                                        // name="Trapezoid"
-                                        id="trapezoid"
-                                        backgroundColor="#f1a63852"
-                                        width="150px"
-                                        height="200px"
-                                        formula="polygon(44% 0%,55% 0%,100% 100%,0% 100%)"
-                                    />
-                                </div>
-                            )
-                            } */}
                             <div 
                             className="mediaBox" 
                             onMouseEnter={()=>setHoverStatemail({state: true, color: "#f1a638"})} 
@@ -167,22 +88,7 @@ export const ContactScreen = React.forwardRef((props, ref)=>{
                             <div className="wire"/>
                             <div className="bulbHandler"/>
                             <div style={hoverStategithub.state ? {boxShadow: `0 0 100px 80px ${hoverStategithub.color}`, backgroundImage: `radial-gradient(#fff1c0, #5bff4b)`} : {}} 
-                            className={`bulb ${mobileResolution ? "blinkingGithub" : ""}`} />
-                            {/* <div style={{backgroundColor: `${hoverStategithub.color}`, zIndex: 1}} className="bulb"/> */}
-                            {/* <div className="lightShade"/> */}
-                            {/* {hoverStategithub.state && (
-                                <div className="trapezoid">
-                                    <Shape
-                                        // name="Trapezoid"
-                                        id="trapezoid"
-                                        backgroundColor="#f206d745"
-                                        width="150px"
-                                        height="200px"
-                                        formula="polygon(44% 0%,55% 0%,100% 100%,0% 100%)"
-                                    />
-                                </div>
-                            )
-                            } */}
+                            className={`bulb ${mobileResolution ? "blinkingGithub" : ""}`} />ß
                             <div 
                             className="mediaBox" 
                             onClick={()=>openInNewTab("https://github.com/Venkadeshkissflow")}
