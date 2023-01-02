@@ -15,12 +15,11 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "./styles.css";
 import "swiper/css/effect-cards";
-// import "swiper/css/bundle"
+import "swiper/css/bundle"
 
 import "../../commonstyle.css"
 
 import { EffectCoverflow, Keyboard , Navigation, Autoplay, Mousewheel, EffectFade, EffectCards } from "swiper";
-import { useEffect } from "react";
 
 const SELF_DETAILS = [
 {
