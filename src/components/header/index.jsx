@@ -3,8 +3,8 @@ import React, {useState, useLayoutEffect} from "react";
 import {themeStore} from "../../store/index";
 import {THEME,SCREEN} from "../../constant"
 
-import HomeIcon from "../../images/home1.png";
-import AboutIcon from "../../images/aboutnew.jpeg";
+import HomeIcon from "../../images/home.png";
+import AboutIcon from "../../images/aboutnew.png";
 import ContactIcon from "../../images/Contact.png";
 import MoonIcon from "../../images/moonicon.png";
 import SunIcon from "../../images/SunIcon1.png";

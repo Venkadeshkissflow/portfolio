@@ -3,7 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import CountryHen from "../../images/countryhen.png";
-import Award from "../../images/award.jpg";
+import Award from "../../images/award.webp";
 import chat from "../../images/chats.jpg";
 import pots from "../../images/pots.jpg";
 import sportcertificate from "../../images/certificate2.webp";

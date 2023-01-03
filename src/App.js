@@ -100,13 +100,6 @@ function App() {
       <AboutScreen ref={aboutRef} />
       <SelfExplore ref={acheivementsRef} mobileResolution={mobileResolution} />
       <ContactScreen ref={contactRef} mobileResolution={mobileResolution} />
-      <Snowfall
-            style={{
-                position: 'fixed',
-                width: '100vw',
-                height: '100vh'
-            }}
-        />
       </div>
         <div className={`moonImage ${theme === THEME.LIGHT ? "moonSetDown" : "moonSetUp"}`}></div>
         <div className={`sun ${theme === THEME.LIGHT ? "sunSet" : "sunSetDown"}`}/>

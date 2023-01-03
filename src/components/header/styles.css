@@ -58,7 +58,7 @@
     font-weight: bold;
     margin-inline:10px;
     width: 2.5rem;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -70,10 +70,6 @@
     .headerButton {
         margin-inline:5px;
     }
-}
-
-.theme {
-    background-image: var(--bg-color);
 }
 
 .iconContainer {
