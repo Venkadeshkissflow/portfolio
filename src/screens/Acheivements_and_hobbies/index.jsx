@@ -6,8 +6,8 @@ import CountryHen from "../../images/countryhen.png";
 import Award from "../../images/award.jpg";
 import chat from "../../images/chats.jpg";
 import pots from "../../images/pots.jpg";
-import sportcertificate from "../../images/certificate2.jpg";
-import projectCertificate from "../../images/certificate1.jpg";
+import sportcertificate from "../../images/certificate2.webp";
+import projectCertificate from "../../images/certificate.webp";
 import ArtCertificate from "../../images/certificateArt.png"
 
 import "swiper/css";

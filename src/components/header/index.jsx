@@ -50,7 +50,7 @@ export function HeaderComponent({screenNavigations, mobileResolution}){
     return (
         <div onMouseOver={onMouseHover} onMouseLeave={onMouseLeave} className="outerContainer">
             <div className={`${mouseHover ? "visible" : "hidden"} headerOuterContainer`}>
-                <div className={`${mouseHover ? "visibleProfile" : "hiddenProfile"} profileIcon headerButton fontStyle`}>
+                <div className={`${mouseHover ? "visibleProfile" : "hiddenProfile"} profileIcon headerButton fontStyle logo`}>
                 <img alt="" className="icon" src={Logo} />
                 </div>
                 <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{

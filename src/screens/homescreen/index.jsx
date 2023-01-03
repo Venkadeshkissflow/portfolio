@@ -1,7 +1,7 @@
 import React from "react";
 import {Card} from "../../components/card/index"
 
-import ProfilePic from "../../images/profilepic.jpg"
+import ProfilePic from "../../images/profilepic.webp"
 
 import "./styles.css";
 import "../../commonstyle.css"

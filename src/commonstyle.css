@@ -23,10 +23,6 @@
     color: white;
 }
 
-.IconContainer:hover {
-    transform:scale(2);
-}
-
 .Icon {
     height: 2em;
     width: 2em;
