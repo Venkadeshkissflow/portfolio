@@ -1,5 +1,4 @@
 import React, {useState, useRef, useLayoutEffect} from "react";
-import Snowfall from 'react-snowfall'
 
 import {themeStore} from "../src/store/index";
 import {THEME, THEME_LOCATION, SCREEN} from "./constant.js"
