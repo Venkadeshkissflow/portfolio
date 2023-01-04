@@ -11,6 +11,19 @@
   }
 }
 
+.App::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 8px;
+}
+ 
+.App::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.App::-webkit-scrollbar-thumb {
+  background-color: #000000b3;
+}
+
 .backgroundImage {
   bottom: 0;
   right: 0;
