@@ -111,7 +111,7 @@ function App() {
             <div className="theme4 themeBox" onClick={()=>SetThemeEvent(THEME_LOCATION.OCEAN)}/>
             <div className="centrPart" />
         </div>
-          <p className="fontStyle homeScreenfonts">change theme</p>
+          <p className="fontStyle themeFontStyle">change theme</p>
         </div>
     </div>
   );

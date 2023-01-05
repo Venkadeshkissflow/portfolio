@@ -17,11 +17,11 @@
 }
  
 .App::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px var(--track-color);
 }
  
 .App::-webkit-scrollbar-thumb {
-  background-color: #000000b3;
+  background-color: var(--bar-color);
 }
 
 .backgroundImage {
@@ -298,4 +298,8 @@
   border-radius: 50%;
   position: absolute;
   border: 1px solid white;
+}
+
+.themeFontStyle {
+  color: var(--theme-font-color) !important
 }

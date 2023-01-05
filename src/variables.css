@@ -9,7 +9,10 @@
     --wire-color: white;
     --board-border: #745738;
     --board-background-color: radial-gradient(#191919, black, black);
-    --bulb-handle-color: black
+    --bulb-handle-color: black;
+    --theme-font-color: white;
+    --track-color: #00132f;
+    --bar-color: #0a27462e
 }
 
 @media screen {
@@ -22,7 +25,10 @@ body.dark {
     --card-reflaction: #000f2d;
     --wire-color: white;
     --board-border: #745738;
-    --board-background-color: radial-gradient(#191919, black, black)
+    --board-background-color: radial-gradient(#191919, black, black);
+    --theme-font-color: white;
+    --bar-color: rgb(0, 6, 32);
+    --track-color: rgba(55, 55, 55, 0.484);
 }
 }
 
@@ -37,6 +43,9 @@ body.light {
     --wire-color: rgb(255, 255, 255);
     --board-border: #bb8d5b;
     --board-background-color: radial-gradient(#2f5b45, #034f29, #034f29);
+    --theme-font-color: #00646e;
+    --track-color: #00132f;
+    --bar-color: #000f2d
 }
 }
 
@@ -45,6 +54,8 @@ body.light {
         --bg-color: linear-gradient(#00646e 45%, rgb(0 237 221 / 10%));
         --card-bg-color: #0a27462e;
         --card-reflaction: #000f2d;
+        --theme-font-color: #00646e;
+        --bar-color: #000f2d
     }
 }
 
@@ -53,6 +64,8 @@ body.light {
         --bg-color: linear-gradient(#337138 45%, rgb(171 225 176));
         --card-bg-color: #0a27462e;
         --card-reflaction:#0d4500;
+        --theme-font-color: #337138;
+        --bar-color: #0d4500
     }
 }
 
@@ -61,6 +74,8 @@ body.light {
         --bg-color: linear-gradient(#bc438d 45%, rgb(146 122 144));
         --card-bg-color: #0a27462e;
         --card-reflaction:#7f0b4e;
+        --theme-font-color: #bc438d;
+        --bar-color: #7f0b4e
     }
 }
 
@@ -69,5 +84,7 @@ body.light {
         --bg-color: radial-gradient(circle at 100% 0%,#ffe5b5 25%,#ffa400 75%);
         --card-bg-color: #0a27462e;
         --card-reflaction:#3e1313;
+        --theme-font-color: #ffe5b5;
+        --bar-color: #3e1313
     }
 }

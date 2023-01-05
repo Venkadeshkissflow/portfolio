@@ -53,7 +53,7 @@ button {
 }
 
 .board {
-    height: 70%;
+    height: 25rem;
     width: 80%;
     border: 1px solid #b6b6b69c;
     background: var(--card-bg-color);
