@@ -16,7 +16,9 @@ export const HomeScreen = React.forwardRef((props, ref) => {
                 <p className="fontStyle homeScreenfonts">FRONT-END WEB DEVELOPER</p>
                 {/* <button onClick={()=> window.open("https://drive.google.com/file/d/11WdOSymu6ENjcJo9DSR5c4X4rNKxz0AY/view?usp=sharing", '_blank', 'noreferrer')} className="fontStyle button">View Resume</button> */}
                 </div>
+                <div className="imageContainer">
                 <img className="image" src={ProfilePic} alt=""/>
+                </div>
             </Card>
         </div>
     )

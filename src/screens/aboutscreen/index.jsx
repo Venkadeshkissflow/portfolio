@@ -28,7 +28,7 @@ export const AboutScreen = React.forwardRef((props, ref)=>{
 
                 <div className="skillsBoard">
                 <p className="fontStyle fontTitleStyle skills">Skill Sets</p>
-                <div>
+                <div className="skillsContainer">
                 <span className="IconContainer reactIcon">
                         <DiReact className="Icon"/>
                     </span>
