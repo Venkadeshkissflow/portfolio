@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100vh;
+    height: 50vh;
     flex-wrap: wrap-reverse;
 }
 
@@ -16,14 +16,24 @@
     z-index: 2;
 }
 
+.astroIcon {
+    position: absolute;
+    height: 130px;
+    width: 130px;
+    top: -105px;
+    left: 0px;
+}
+
 .homeScreenCard {
     align-self:center;
     max-width: 30rem;
-    width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    overflow: visible;
 }
 
 .homeScreenfonts {
@@ -31,20 +41,27 @@
     font-size: 1em;
 }
 
-.name {
-    font-size: 2em;
+.fontStyle.name {
+    font-size: max(25px, 3vw);
+    font-weight: bold;
+}
+
+.fontStyle.helloText {
+    font-size: max(15px, 1.5vw);
+    letter-spacing: .35em;
+}
+
+.fontStyle.self {
+    font-size: max(15px, 1.5vw);
+}   
+
+.fontStyle.role {
+    color: var(--highlight-font-color)
 }
 
 .button {
     width: fit-content;
     margin-block-start: 8px;
-}
-
-.profilepic {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px 5px var(--shadow-color);
 }
 
 .image {

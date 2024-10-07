@@ -1,7 +1,7 @@
 import React from "react";
 import {Card} from "../../components/card/index"
 
-import ProfilePic from "../../images/profilepic.webp"
+import AstronutStar from "../../images/astronut_star.png"
 
 import "./styles.css";
 import "../../commonstyle.css"
@@ -10,15 +10,11 @@ export const HomeScreen = React.forwardRef((props, ref) => {
     return(
         <div ref={ref} className="homeScrean">
             <Card className="homeScreenCard">
-                <div className="profileInfo">
-                <p className="fontStyle homeScreenfonts about"> checking....</p>
-                <p className="fontStyle homeScreenfonts name"> Venkadesh S </p>
-                <p className="fontStyle homeScreenfonts">FRONT-END DEVELOPER</p>
-                {/* <button onClick={()=> window.open("https://drive.google.com/file/d/11WdOSymu6ENjcJo9DSR5c4X4rNKxz0AY/view?usp=sharing", '_blank', 'noreferrer')} className="fontStyle button">View Resume</button> */}
-                </div>
-                <div className="imageContainer">
-                <img className="image" src={ProfilePic} alt=""/>
-                </div>
+                    <img alt="helloworld" className="astroIcon" src={AstronutStar} />
+                    <p className="fontStyle homeScreenfonts helloText"> Hello world 👋,</p>
+                    <p className="fontStyle homeScreenfonts name"> I'm Venkadesh S </p>
+                    <p className="fontStyle homeScreenfonts role">FRONT-END DEVELOPER</p>
+                    <p className="fontStyle homeScreenfonts self">A self-taught passionate Frontend developer from India</p>
             </Card>
         </div>
     )
