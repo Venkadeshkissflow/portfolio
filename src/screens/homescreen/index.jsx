@@ -11,9 +11,9 @@ export const HomeScreen = React.forwardRef((props, ref) => {
         <div ref={ref} className="homeScrean">
             <Card className="homeScreenCard">
                 <div className="profileInfo">
-                <p className="fontStyle homeScreenfonts about"> Haii 👋, I'm</p>
-                <p className="fontStyle homeScreenfonts name"> Venkadesh S</p>
-                <p className="fontStyle homeScreenfonts">FRONT-END WEB DEVELOPER</p>
+                <p className="fontStyle homeScreenfonts about"> checking....</p>
+                <p className="fontStyle homeScreenfonts name"> Venkadesh S </p>
+                <p className="fontStyle homeScreenfonts">FRONT-END DEVELOPER</p>
                 {/* <button onClick={()=> window.open("https://drive.google.com/file/d/11WdOSymu6ENjcJo9DSR5c4X4rNKxz0AY/view?usp=sharing", '_blank', 'noreferrer')} className="fontStyle button">View Resume</button> */}
                 </div>
                 <div className="imageContainer">
