@@ -42,20 +42,21 @@
 }
 
 .fontStyle.name {
-    font-size: max(25px, 3vw);
+    font-size: 35px;
     font-weight: bold;
 }
 
 .fontStyle.helloText {
-    font-size: max(15px, 1.5vw);
+    font-size: 20px;
     letter-spacing: .35em;
 }
 
 .fontStyle.self {
-    font-size: max(15px, 1.5vw);
+    font-size: 20px;
 }   
 
 .fontStyle.role {
+    font-size: 20px;
     color: var(--highlight-font-color)
 }
 
