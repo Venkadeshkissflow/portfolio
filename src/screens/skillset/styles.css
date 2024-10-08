@@ -1,5 +1,5 @@
 .skillsWrapper {
-    height: 18rem;
+    height: 15rem;
     background-size: cover;
     display: grid;
     align-items: center;
@@ -10,10 +10,12 @@
 }
 
 .skillset {
-    height: 100%;
+    height: 120px;
     padding: 0;
     display: flex;
     align-items: center;
+    position: relative;
+    overflow: visible;
 }
 
 .skillIcon {
@@ -47,4 +49,14 @@
 .skillset.node:hover > * {
     fill: #74b25a;
     color: #74b25a;
+}
+
+.skillFont {
+    font-size: 20px;
+}
+
+.astroStudy {
+    position: absolute;
+    height: 200px;
+    top: -145px
 }

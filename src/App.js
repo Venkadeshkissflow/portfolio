@@ -6,7 +6,8 @@ import {THEME, THEME_LOCATION, SCREEN} from "./constant.js"
 import './App.css';
 
 import {HomeScreen} from "../src/screens/homescreen/index";
-import {AboutScreen} from "../src/screens/aboutscreen/index";
+import {SkillSet} from "../src/screens/skillset/index";
+import {Experiance} from "../src/screens/experiance/index.jsx"
 import {HeaderComponent} from "../src/components/header/index";
 import {ContactScreen} from "../src/screens/contacts/index";
 import {SelfExplore} from "../src/screens/Acheivements_and_hobbies/index";
@@ -96,7 +97,8 @@ function App() {
         mobileResolution={mobileResolution}
       />
       <HomeScreen ref={homeRef} />
-      <AboutScreen ref={aboutRef} />
+      <SkillSet ref={aboutRef} />
+      <Experiance />
       <SelfExplore ref={acheivementsRef} mobileResolution={mobileResolution} />
       <ContactScreen ref={contactRef} mobileResolution={mobileResolution} />
       </div>

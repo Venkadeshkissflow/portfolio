@@ -2,9 +2,6 @@ import React from "react";
 
 import {Card} from "../../components/card/index";
 
-import Kissflow from "../../images/kissflow.gif";
-import Aspire from "../../images/Aspire.png"
-
 import { DiReact } from "react-icons/di";
 import { DiJavascript1 } from "react-icons/di";
 import { DiHtml5 } from "react-icons/di";
@@ -12,6 +9,7 @@ import {FaCss3Alt} from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaNodeJs } from "react-icons/fa";
 
+import AustroStudy from "../../images/astro-study.png"
 
 import "./styles.css";
 import "../../commonstyle.css"
@@ -81,33 +79,34 @@ import "../../commonstyle.css"
 //     )
 // })
 
-export const AboutScreen = React.forwardRef((props, ref)=>{
+export const SkillSet = React.forwardRef((props, ref)=>{
     return (
-    <div className="skillsWrapper">
+    <div ref={ref} className="skillsWrapper">
         <Card className="skillset reactjs">
+            <img alt="" className="astroStudy" src={AustroStudy} />
             <DiReact className="skillIcon "/>
-            <span className="fontStyle">ReactJS</span>
+            <span className="fontStyle skillFont">ReactJS</span>
         </Card>
         <Card className="skillset js">
             <DiJavascript1 className="skillIcon "/>
-            <span className="fontStyle">Java script</span>
+            <span className="fontStyle skillFont">Java script</span>
         </Card>
         <Card className="skillset html">
             <DiHtml5 className="skillIcon "/>
-            <span className="fontStyle">HTML</span>
+            <span className="fontStyle skillFont">HTML</span>
         </Card>
 
         <Card className="skillset css">
             <FaCss3Alt className="skillIcon "/>
-            <span className="fontStyle">CSS</span>
+            <span className="fontStyle skillFont">CSS</span>
         </Card>
         <Card className="skillset tailwind">
             <RiTailwindCssFill className="skillIcon "/>
-            <span className="fontStyle">Tailwind CSS</span>
+            <span className="fontStyle skillFont">Tailwind CSS</span>
         </Card>
         <Card className="skillset node">
                  <FaNodeJs className="skillIcon "/>
-                 <span className="fontStyle">Node JS</span>
+                 <span className="fontStyle skillFont">Node JS</span>
         </Card>
     </div>
     )
