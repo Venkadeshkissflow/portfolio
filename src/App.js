@@ -9,40 +9,9 @@ import {HomeScreen} from "../src/screens/homescreen/index";
 import {SkillSet} from "../src/screens/skillset/index";
 import {Experiance} from "../src/screens/experiance/index.jsx"
 import {HeaderComponent} from "../src/components/header/index";
-import {ContactScreen} from "../src/screens/contacts/index";
 import {SelfExplore} from "../src/screens/Acheivements_and_hobbies/index";
+import {ProjectSection} from "../src/screens/projects/index.jsx"
 
-
-function BackgroundImage({theme}){
-  return(
-    <>
-        <div 
-           className={`
-           ${THEME_LOCATION.FOREST} 
-           ${theme !== THEME_LOCATION.FOREST ? "removed" : "live" } 
-           backgroundImage
-        `}/>
-         <div 
-         className={`
-         ${THEME_LOCATION.HIMALAYAS} 
-         ${theme !== THEME_LOCATION.HIMALAYAS ? "removed" : "live" } 
-         backgroundImage
-         `}/>
-             <div 
-         className={`
-         ${THEME_LOCATION.OCEAN} 
-         ${theme !== THEME_LOCATION.OCEAN ? "removed" : "live" } 
-         backgroundImage
-         `}></div>
-             <div 
-         className={`
-         ${THEME_LOCATION.DESERT}
-         ${theme !== THEME_LOCATION.DESERT ? "removed" : "live" }  
-         backgroundImage
-         `}></div>
-    </>
-  )
-}
 
 function App() {
     const swiperRef = useRef(null);
@@ -98,9 +67,9 @@ function App() {
       />
       <HomeScreen ref={homeRef} />
       <SkillSet ref={aboutRef} />
+      <ProjectSection />
       <Experiance />
       <SelfExplore ref={acheivementsRef} mobileResolution={mobileResolution} />
-      <ContactScreen ref={contactRef} mobileResolution={mobileResolution} />
       </div>
         <div className={`moonImage ${theme === THEME.LIGHT ? "moonSetDown" : "moonSetUp"}`}></div>
         <div className={`sun ${theme === THEME.LIGHT ? "sunSet" : "sunSetDown"}`}/>

@@ -1,5 +1,4 @@
 .skillsWrapper {
-    height: 15rem;
     background-size: cover;
     display: grid;
     align-items: center;
@@ -7,6 +6,7 @@
     grid-template-columns: repeat(3, 250px);
     grid-template-rows: repeat(2, 1fr);
     gap: 8px;
+    padding-top: 10rem;
 }
 
 .skillset {

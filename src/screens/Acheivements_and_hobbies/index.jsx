@@ -1,25 +1,19 @@
 import React from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import {Card} from "../../components/card/index";
 
 import CountryHen from "../../images/countryhen.png";
-import Award from "../../images/award.webp";
 import chat from "../../images/chats.jpg";
 import pots from "../../images/pots.jpg";
 import sportcertificate from "../../images/certificate2.webp";
 import projectCertificate from "../../images/certificate.webp";
 import ArtCertificate from "../../images/certificateArt.png";
-import Astrofun from "../../images/astro-fun.png"
-
-import { FaTrophy } from "react-icons/fa6";
-
+import Award from "../../images/awards.png"
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/effect-cards";
-// import "swiper/css/bundle"
 import "./styles.css";
 
 import "../../commonstyle.css"
@@ -70,76 +64,30 @@ const SELF_DETAILS = [
 ]
 
 const AWARDS = [
- "Star Performer", "Engineering Rockstar"
+  {
+    awardTitle: "Star Performer",
+    awardFunction: "BO Award - 2022 (Kissflow)"
+  },
+  {
+    awardTitle: "Engineering Rockstar",
+    awardFunction: "ALTIUS - 2023 (Kissflow)"
+  }
 ]
 
 export const SelfExplore = React.forwardRef(({mobileResolution=false}, ref)=>{
     return (
-      <div className="awardsWrapper">
-        <div className="trophyWrapper">
-          <img className="astrofun" alt="award" src={Astrofun} />
-        {AWARDS.map((award)=>(
-          <Card className="projectCard">
-            <FaTrophy className="trophyIcon" />
-            <span className="fontStyle awardTitle">{award}</span>
-          </Card>
-        ))}
+        <div className="awardsWrapper">
+          <div className="trophyWrapper">
+            {AWARDS.map(({awardTitle, awardFunction})=>(
+              <div className="awardWrapper">
+                <img className="awardImage" alt="award" src={Award} />
+                <Card className="projectCard">
+                  <div className="fontStyle awardTitle">{awardTitle}</div>
+                  <div className="fontStyle awardTitle">{awardFunction}</div>
+                </Card>
+              </div>
+            ))}
+            </div>
         </div>
-      </div>
-
     )
 })
-
-function MobileSwiper(){
-  return (
-    <Swiper
-    effect={"cards"}
-    grabCursor={true}
-    modules={[EffectCards]}
-    className="mySwiper"
-  >
-    {SELF_DETAILS.map((data, index)=>(
-          <SwiperSlide className="board">
-          <img className="mobileResponsiveImg" alt={data.title} src={data.img} />
-          <div className="content">
-          <div className="fontStyle fontTitleStyle">{data.title}</div>
-          <div className="fontStyle">{data.detailInfo}</div> 
-          </div>
-          </SwiperSlide>
-    ))}
-  </Swiper> 
-  )
-}
-
-function WebResponsiveSwiper(){
-  return (
-    <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: false,
-        }}
-        modules={[EffectCoverflow, Keyboard, Navigation, Autoplay, Mousewheel, EffectFade]}
-        className="mySwiper"
-        navigation={true}
-        mousewheel={true}
-        centerInsufficientSlides={true}
-        
-      >
-        {SELF_DETAILS.map((data, index)=>(
-            <SwiperSlide virtualIndex={index} zoom={true}>
-                <div key={index} name="demo" className={`board selfExploreCard`}>
-                    <img className="swiperImage" alt={data.title} src={data.img} />
-                    <div className="fontStyle fontTitleStyle">{data.title}</div>
-                    <div className="fontStyle">{data.detailInfo}</div> 
-                </div>
-            </SwiperSlide>
-        ))}
-      </Swiper>
-  )
-}
