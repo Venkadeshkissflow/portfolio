@@ -13,6 +13,7 @@ import Logo from "../../images/logo.png";
 
 import "./styles.css";
 import "../../commonstyle.css"
+import { Card } from "../card";
 
 export function HeaderComponent({screenNavigations, mobileResolution}){
     const [mouseHover, setMouseHover]=useState(true);
@@ -48,39 +49,65 @@ export function HeaderComponent({screenNavigations, mobileResolution}){
     }
 
     return (
-        <div onMouseOver={onMouseHover} onMouseLeave={onMouseLeave} className="outerContainer">
-            <div className={`${mouseHover ? "visible" : "hidden"} headerOuterContainer`}>
-                <div className={`${mouseHover ? "visibleProfile" : "hiddenProfile"} profileIcon headerButton fontStyle logo`}>
-                <img alt="" className="icon" src={Logo} />
-                </div>
-                <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
+        // <div onMouseOver={onMouseHover} onMouseLeave={onMouseLeave} className="outerContainer">
+        //     <div className={`${mouseHover ? "visible" : "hidden"} headerOuterContainer`}>
+        //         <div className={`${mouseHover ? "visibleProfile" : "hiddenProfile"} profileIcon headerButton fontStyle logo`}>
+        //         <img alt="" className="icon" src={Logo} />
+        //         </div>
+        //         <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
+        //             // window.location="/" 
+        //             screenNavigations(SCREEN.HOME)
+        //         }}>
+        //             <img alt="" className="icon" src={HomeIcon} />
+        //         </div>
+        //         <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
+        //             screenNavigations(SCREEN.ABOUT)
+        //         }}>
+        //             <img alt="" className="icon" src={AboutIcon} />
+        //         </div>
+        //         <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
+        //             screenNavigations(SCREEN.ACHEIVMENTS)
+        //         }}>
+        //             <img alt="" className="icon" src={AcheivementIcon} />
+        //         </div>
+        //         <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
+        //             screenNavigations(SCREEN.CONTACT)
+        //         }}>
+        //             <img alt="" className="icon" src={ContactIcon} />
+        //         </div>
+        //         <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton theme`} onClick={setThemeEvent} >
+        //             {theme === THEME.LIGHT ? 
+        //                 <img alt="themeIconSun" className="themeIcon icon" src={SunIcon} /> : 
+        //                 <img alt="themeIconMoon" className="themeIcon icon" src={MoonIcon}/>
+        //             }
+        //         </div>
+        //     </div>
+        // </div>
+        <Card className={"header"}>
+            <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
                     // window.location="/" 
                     screenNavigations(SCREEN.HOME)
                 }}>
-                    <img alt="" className="icon" src={HomeIcon} />
-                </div>
-                <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
-                    screenNavigations(SCREEN.ABOUT)
-                }}>
-                    <img alt="" className="icon" src={AboutIcon} />
-                </div>
-                <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
-                    screenNavigations(SCREEN.ACHEIVMENTS)
-                }}>
-                    <img alt="" className="icon" src={AcheivementIcon} />
-                </div>
-                <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
-                    screenNavigations(SCREEN.CONTACT)
-                }}>
-                    <img alt="" className="icon" src={ContactIcon} />
-                </div>
-                <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton theme`} onClick={setThemeEvent} >
-                    {theme === THEME.LIGHT ? 
-                        <img alt="themeIconSun" className="themeIcon icon" src={SunIcon} /> : 
-                        <img alt="themeIconMoon" className="themeIcon icon" src={MoonIcon}/>
-                    }
-                </div>
+                <img alt="" className="icon" src={HomeIcon} />
             </div>
-        </div>
+            <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
+                    // window.location="/" 
+                    screenNavigations(SCREEN.HOME)
+                }}>
+                <img alt="" className="icon" src={AboutIcon} />
+            </div>
+            <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
+                    // window.location="/" 
+                    screenNavigations(SCREEN.HOME)
+                }}>
+                <img alt="" className="icon" src={AcheivementIcon} />
+            </div>
+            <div className={`${mouseHover ? "visibleButton" : "hiddenButton"} headerButton fontStyle`} onClick={()=>{
+                    // window.location="/" 
+                    screenNavigations(SCREEN.HOME)
+                }}>
+                <img alt="" className="icon" src={ContactIcon} />
+            </div>
+        </Card>
     )
 }

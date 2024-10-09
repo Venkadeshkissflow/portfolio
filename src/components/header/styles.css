@@ -1,8 +1,8 @@
-.headerOuterContainer {
+/* .headerOuterContainer {
     position: absolute;
     max-width: 80rem;
     background: var(--transparent-bg-color);
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+    
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid var(--transparent-border-color);
@@ -37,7 +37,7 @@
 
 .hiddenButton, .hiddenProfile {
     height: 0;
-    /* visibility: hidden; */
+
     transition-delay: .3s;
     transition: all .1s linear;
     padding: 0px;
@@ -102,4 +102,20 @@
     position: absolute;
     left: 13%;
     margin: 10px
+} */
+
+.header {
+    position: fixed;
+    left: 0px;
+    height: fit-content;
+    top: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.headerButton > img {
+   height: 40px;
+   width: 40px;
 }

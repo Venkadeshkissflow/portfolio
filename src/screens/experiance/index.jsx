@@ -14,7 +14,7 @@ import "../../commonstyle.css"
 const experianceList = [
     {
         company: "Aspire",
-        role: "intern",
+        role: "Internship",
         companyLogo: Aspire,
     },
     {
@@ -39,26 +39,29 @@ export const Experiance = React.forwardRef((props, ref)=>{
         <div className="experianceCardWrapper">
         <Card className="experianceCard">
             <img className="astronut" alt="astro-fly" src={AstroFly} />
-                <div className="experianceWrapper">
-                {
-                    experianceList.map(({role, companyLogo}, index)=>(
-                        <div className="experianceBox" id={`${role}-${index}`}>
-                            <div class="flagWrapper">
-                                <img className="companyLogo" src={companyLogo} alt=""/>
-                            </div>
-                            <div className="fontStyle">{role}</div>
-                        </div>
-                    ))
-                }
-                </div>
-             
-                <div class="container">    
+            <div class="container">
                     <div class="progress progress-striped">
                         <div class="progress-bar"></div>
                             <div className="rocketWrapper">
                             <img alt="rocket" className="rocketImg" src={Rocket}/> 
                             </div>
                     </div> 
+                    <div className="experianceWrapper">
+                    {
+                        experianceList.map(({role, company, companyLogo}, index)=>(
+                            <div className="experianceBox" id={`${role}-${index}`}>
+                                <div class="flagWrapper"></div>
+                                <div className="infoSection">
+                                    <div className="companySection">
+                                        <img className="companyLogo" src={companyLogo} alt=""/>
+                                        <span>{company}</span>
+                                    </div>   
+                                    <div className="fontStyle Exprole">{role}</div>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
                 </div>
         </Card>
         </div>

@@ -104,17 +104,6 @@ function App() {
       </div>
         <div className={`moonImage ${theme === THEME.LIGHT ? "moonSetDown" : "moonSetUp"}`}></div>
         <div className={`sun ${theme === THEME.LIGHT ? "sunSet" : "sunSetDown"}`}/>
-        <BackgroundImage theme={location} />
-        <div className="themeContainer">
-        <div className="themeSwitch">
-            <div id="forest" className="theme1 themeBox" onClick={()=>SetThemeEvent(THEME_LOCATION.FOREST)}/>
-            <div id="himalayas" className="theme2 themeBox" onClick={()=>SetThemeEvent(THEME_LOCATION.DESERT)}/>
-            <div className="theme3 themeBox" onClick={()=>SetThemeEvent(THEME_LOCATION.HIMALAYAS)}/>
-            <div className="theme4 themeBox" onClick={()=>SetThemeEvent(THEME_LOCATION.OCEAN)}/>
-            <div className="centrPart" />
-        </div>
-          <p className="fontStyle themeFontStyle">change theme</p>
-        </div>
     </div>
   );
 }
