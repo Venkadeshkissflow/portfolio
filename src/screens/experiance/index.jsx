@@ -16,22 +16,26 @@ const experianceList = [
         company: "Aspire",
         role: "Internship",
         companyLogo: Aspire,
-    },
-    {
-          company: "Kissflow",
-        role: "Associative Software Engineer",
-          companyLogo: Kissflow,
+        year: "2020 - 2021"
     },
     {
         company: "Kissflow",
-      role: "Software Engineer",
-         companyLogo: Kissflow,
-  },
-  {
-    company: "Kissflow",
-  role: "Senior Software Engineer",
-       companyLogo: Kissflow,
-}
+        role: "Associative Software Engineer",
+        companyLogo: Kissflow,
+        year: "2021 - 2022"
+    },
+    {
+        company: "Kissflow",
+        role: "Software Engineer",
+        companyLogo: Kissflow,
+        year: "2022 - 2024"
+    },
+    {
+        company: "Kissflow",
+        role: "Senior Software Engineer",
+        companyLogo: Kissflow,
+        year: "2024 - Present"
+    }
 ]
 
 export const Experiance = React.forwardRef((props, ref)=>{
@@ -48,7 +52,7 @@ export const Experiance = React.forwardRef((props, ref)=>{
                     </div> 
                     <div className="experianceWrapper">
                     {
-                        experianceList.map(({role, company, companyLogo}, index)=>(
+                        experianceList.map(({role, company, year, companyLogo}, index)=>(
                             <div className="experianceBox" id={`${role}-${index}`}>
                                 <div class="flagWrapper"></div>
                                 <div className="infoSection">
@@ -57,6 +61,7 @@ export const Experiance = React.forwardRef((props, ref)=>{
                                         <span>{company}</span>
                                     </div>   
                                     <div className="fontStyle Exprole">{role}</div>
+                                    <span className="fontStyle year">{year}</span>
                                 </div>
                             </div>
                         ))

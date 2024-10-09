@@ -25,6 +25,7 @@ export const HomeScreen = React.forwardRef((props, ref) => {
                         <img className="socialIcon" alt="linkedin" src={Twitter}/>
                         <img className="socialIcon" alt="linkedin" src={Mail}/>
                     </div>
+                    <div className="resume">Resume</div>
             </Card>
         </div>
     )

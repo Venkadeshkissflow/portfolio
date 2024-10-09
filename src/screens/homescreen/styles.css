@@ -86,3 +86,17 @@
     display: flex;
     gap: 12px;
 }
+
+.resume {
+    padding: 10px;
+    border: 2px solid var(--highlight-font-color);
+    color: var(--highlight-font-color);
+    width: fit-content;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.resume:hover {
+    background-color: var(--highlight-font-color);
+    color: var(--card-bg-color);
+}

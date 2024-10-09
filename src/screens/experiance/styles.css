@@ -157,6 +157,8 @@
   display: flex;
   align-items: center;
   font-weight: bold;
+  gap: 12px;
+  margin-inline-start: 12px;
 }
 
 .experianceWrapper {
@@ -193,4 +195,8 @@
 .Exprole {
   font-size: 14px;
   color: var(--highlight-font-color);
+}
+
+.year {
+  font-size: 14px;
 }
