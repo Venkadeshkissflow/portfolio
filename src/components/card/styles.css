@@ -1,5 +1,4 @@
 .Card {
-    padding: 2em;
     background-clip: border-box;
     border-radius: 8px;
     transition: 1s all;
@@ -22,7 +21,7 @@
     0% {
         margin-bottom: 20px;
       }
-      50%{
+      50% {
         margin-bottom: 0px;
       }
       100% {

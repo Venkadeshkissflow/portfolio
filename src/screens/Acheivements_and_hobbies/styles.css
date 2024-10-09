@@ -1,4 +1,4 @@
-.selfexplorerSection {
+/* .selfexplorerSection {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -80,4 +80,52 @@
 
   .mobileResponsiveImg {
     height: 12rem;
+  } */
+
+.projectCard {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.projectCard:hover > .trophyIcon {
+  fill: #01fffe
+}
+
+.awardsWrapper {
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .trophyIcon {
+    height: 150px;
+    width: 150px;
+    /* fill:  #01fffe; */
+    box-shadow: inset 5px 4px 13px 2px;
+    padding: 12px;
+  }
+
+  .trophyWrapper {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .astrofun {
+    height: 250px;
+    position: absolute;
+    top: -179px;
+    left: -54px;
+    transform: rotate(338deg);
   }

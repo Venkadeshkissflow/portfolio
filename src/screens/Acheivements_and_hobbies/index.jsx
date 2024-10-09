@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import {Card} from "../../components/card/index";
 
 import CountryHen from "../../images/countryhen.png";
 import Award from "../../images/award.webp";
@@ -8,7 +9,11 @@ import chat from "../../images/chats.jpg";
 import pots from "../../images/pots.jpg";
 import sportcertificate from "../../images/certificate2.webp";
 import projectCertificate from "../../images/certificate.webp";
-import ArtCertificate from "../../images/certificateArt.png"
+import ArtCertificate from "../../images/certificateArt.png";
+import Astrofun from "../../images/astro-fun.png"
+
+import { FaTrophy } from "react-icons/fa6";
+
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -64,11 +69,24 @@ const SELF_DETAILS = [
 },
 ]
 
+const AWARDS = [
+ "Star Performer", "Engineering Rockstar"
+]
+
 export const SelfExplore = React.forwardRef(({mobileResolution=false}, ref)=>{
     return (
-    <div ref={ref} className="selfexplorerSection">
-      {mobileResolution ? <MobileSwiper/> : <WebResponsiveSwiper/>}
-    </div>
+      <div className="awardsWrapper">
+        <div className="trophyWrapper">
+          <img className="astrofun" alt="award" src={Astrofun} />
+        {AWARDS.map((award)=>(
+          <Card className="projectCard">
+            <FaTrophy className="trophyIcon" />
+            <span className="fontStyle awardTitle">{award}</span>
+          </Card>
+        ))}
+        </div>
+      </div>
+
     )
 })
 
