@@ -13,39 +13,28 @@ import { SiSocketdotio } from "react-icons/si";
 import CountryHen from "../../images/projects/countryhen.png";
 import ChatApplication from "../../images/projects/chatapplication.png";
 import Game from "../../images/projects/game.png";
-import KNCETian from "../../images/projects/kncet.jpg"
+import Vimerza from "../../images/projects/vimerza.jpg";
+import KNCETian from "../../images/projects/kncet.jpg";
 
 
 import "./styles.css"
 
 const PROJECTS = [
     {
-        TITLE: "Country Hen [ REACT NATIVE ]",
-        DESCRIPTIONS: "An ecommerce application user interface is developed for the meat and eggs of countryhen with react native",
+        TITLE: "Vimerza learning platform",
+        DESCRIPTIONS: "Vimerza is a platform for learning cultural courses, and I contributed as one of the developers on this project.",
         LANGUAGES: [
-            DiHtml5, 
             FaCss3Alt,
             DiReact,
         ],
-        IMG: CountryHen
-    },
-    {
-        TITLE: "KNCETians [ REACT NATIVE ]",
-        DESCRIPTIONS: "In this Mobile Application which is used for building connectivity between Alumni and the college.",
-        LANGUAGES: [
-            DiHtml5,
-            FaCss3Alt,
-            DiReact,
-        ],
-        IMG: KNCETian
+        IMG: Vimerza
     },
     {
         TITLE: "Chat App [ Socket io ]",
         DESCRIPTIONS: "In this chat App, we can transfer messages from one to one as personally. here I use socket-io for connecting users.",
         LANGUAGES: [
-            DiHtml5, 
             FaCss3Alt,
-            DiJavascript1,
+            DiReact,
             FaNodeJs,
             SiSocketdotio
         ],
@@ -55,12 +44,20 @@ const PROJECTS = [
         TITLE: "Stone paper scissor game",
         DESCRIPTIONS: "Stone-Paper-Scissors is a simple game where players choose between stone, paper, or scissors, each option defeating or losing to another.",
         LANGUAGES: [
-            DiHtml5, 
             FaCss3Alt,
-            DiJavascript1,
+            DiReact,
         ],
         IMG: Game
-    }
+    },
+    {
+        TITLE: "KNCETians [ REACT NATIVE ]",
+        DESCRIPTIONS: "In this Mobile Application which is used for building connectivity between Alumni and the college.",
+        LANGUAGES: [
+            FaCss3Alt,
+            DiReact,
+        ],
+        IMG: KNCETian
+    },
 ]
 
 export function ProjectSection(){
