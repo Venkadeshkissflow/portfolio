@@ -2,7 +2,7 @@ import React from "react";
 
 import {Card} from "../../components/card/index";
 
-import Award from "../../images/awards.png"
+import Award from "../../images/supportive_images/awards.png"
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -24,7 +24,7 @@ const AWARDS = [
   }
 ]
 
-export const SelfExplore = React.forwardRef(({mobileResolution=false}, ref)=>{
+export const SelfExplore = ()=>{
     return (
         <div className="awardsWrapper">
           <div className="trophyWrapper">
@@ -40,4 +40,4 @@ export const SelfExplore = React.forwardRef(({mobileResolution=false}, ref)=>{
             </div>
         </div>
     )
-})
+}

@@ -3,10 +3,10 @@ import React from "react";
 
 import {Card} from "../../components/card/index";
 
-import Kissflow from "../../images/kissflow.gif";
-import Aspire from "../../images/Aspire.png";
-import Rocket from "../../images/rocket.png";
-import AstroFly from "../../images/astrofly.png"
+import Kissflow from "../../images/companylogo/kissflow.gif";
+import Aspire from "../../images/companylogo/Aspire.png";
+import Rocket from "../../images/supportive_images/rocket.png";
+import AstroFly from "../../images/supportive_images/astrofly.png"
 
 import "./styles.css";
 import "../../commonstyle.css"

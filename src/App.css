@@ -34,21 +34,6 @@
   animation: background-image 3s infinite;
 }
 
-.himalayas {
-  background: url("./images/mountains.webp");
-  background-size: cover;
-}
-
-.forest {
-  background: url("./images/lighthouse.png");
-  background-size: cover;
-}
-
-.ocean {
-  background: url("./images/windmill.png");
-  background-size: cover;
-}
-
 .removed {
   margin-inline-end: -1000px;
   transition: all 1s ease;

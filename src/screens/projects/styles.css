@@ -44,6 +44,7 @@
 
 .infoWrapper {
     display: flex;
+    width: 50%;
     flex-direction: column;
     gap: 12px;
     padding-top: 12px;
