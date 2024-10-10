@@ -1,83 +1,54 @@
-.selfexplorerSection {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    overflow: hidden;
-}
-
-.swipperSlide {
-    width: 15rem;
-}
-
-.swiper{
-  overflow: visible;
-}
-  
-  .swiper-slide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 22px;
-    font-weight: bold;
-    color: #fff;
-  }
-
-.selfExploreCard {
-  padding: 12px;
+.projectCard {
   display: flex;
   flex-direction: column;
-  height: 25rem;
-  width: 15rem;
-  font-size: small;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  font-weight: bold;
 }
 
-  .swiper {
-    width: 20rem;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 300px;
-    height: 300px;
+.awardsWrapper {
+  padding-block: 10rem 5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .trophyIcon {
+    height: 150px;
+    width: 150px;
+    /* fill:  #01fffe; */
+    box-shadow: inset 5px 4px 13px 2px;
     padding: 12px;
   }
-  
-  .swiper-slide img {
-    display: block;
-    width: 100%;
+
+  .trophyWrapper {
+    height: fit-content;
+    width: fit-content;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
   }
 
-  .swiperImage {
-    border-radius: 8px;
-    height: 18rem;
-    width: 12.6rem;
+  .astrofun {
+    height: 250px;
+    position: absolute;
+    top: -179px;
+    left: -54px;
+    transform: rotate(338deg);
   }
 
-  .swiper-cards {
-    z-index: 10;
-    width: 55%;
+  .awardImage {
+    height: 200px;
+    width: 200px;
   }
 
-  .swiper-slide {
+  .awardWrapper {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .swiper-slide img {
-    border-radius: 5px;
-  }
-
-  .swiper-slide .fontStyle {
-    font-size: small;
-  }
-
-  .mobileResponsiveImg {
-    height: 12rem;
+    align-items: center;
   }

@@ -2,6 +2,8 @@
     /* --bg-color: linear-gradient(#212148, #2e172e, #002331); */
     --bg-color:black;
     --card-bg-color: #0a27462e;
+    --card-bg-hover-color: #09263f;
+    --highlight-font-color: #01fffe;
     --transparent-bg-color: #a4a4a32e;
     --transparent-border-color:#d4d4d491;
     --shadow-color: #434343;
@@ -21,7 +23,9 @@ body.dark {
     --bg-color: radial-gradient(circle at 100% 0%,#034c6e 25%, #00132f 75%);
     /* --bg-color: linear-gradient(#855988, #2B2F77, #070B34); */
     /* --bg-color:#00122c; */
-    --card-bg-color: #0a27462e;
+    --card-bg-color: #071e34;
+    --card-bg-hover-color: #09263f;
+    --highlight-font-color: #01fffe;
     --card-reflaction: #000f2d;
     --wire-color: white;
     --board-border: #745738;
@@ -37,6 +41,8 @@ body.light {
     --bg-color: linear-gradient(#00646e 45%, rgb(0 237 221 / 10%));
     /* --bg-color:#095071; */
     --card-bg-color: #0a27462e;
+    --card-bg-hover-color: #09263f;
+    --highlight-font-color: #01fffe;
     --transparent-bg-color: #a4a4a32e;
     --transparent-border-color:#d4d4d491;
     --card-reflaction: #000f2d;

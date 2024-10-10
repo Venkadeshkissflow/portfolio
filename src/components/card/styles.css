@@ -1,8 +1,6 @@
 .Card {
-    padding: 2em;
-    border: 2px solid #b6b6b69c;
     background-clip: border-box;
-    border-radius: 12px;
+    border-radius: 8px;
     transition: 1s all;
     cursor: pointer;
     background-color: var(--card-bg-color);
@@ -10,17 +8,20 @@
     -webkit-backdrop-filter: blur(5px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: all .2s;
     position: relative;
     z-index: 2;
-    animation: card 3s infinite;
+}
+
+.Card:hover {
+  background-color: var(--card-bg-hover-color);
+  box-shadow: 2px 2px 5px;
 }
 
 @keyframes card {
     0% {
         margin-bottom: 20px;
       }
-      50%{
+      50% {
         margin-bottom: 0px;
       }
       100% {

@@ -1,24 +1,54 @@
 import React from "react";
 import {Card} from "../../components/card/index"
 
-import ProfilePic from "../../images/profilepic.webp"
+import AstronutStar from "../../images/supportive_images/astronut_star.png";
+import Linkedin from "../../images/social_media_logos/linkedin.png"
+import Github from "../../images/social_media_logos/github.png"
+import Twitter from "../../images/social_media_logos/twitter.png"
+import Mail from "../../images/social_media_logos/mail.png"
 
 import "./styles.css";
 import "../../commonstyle.css"
 
 export const HomeScreen = React.forwardRef((props, ref) => {
+    function openInNewTab(url){
+        window.open(url, '_blank', 'noreferrer');
+    }
     return(
         <div ref={ref} className="homeScrean">
             <Card className="homeScreenCard">
-                <div className="profileInfo">
-                <p className="fontStyle homeScreenfonts about"> checking....</p>
-                <p className="fontStyle homeScreenfonts name"> Venkadesh S </p>
-                <p className="fontStyle homeScreenfonts">FRONT-END DEVELOPER</p>
-                {/* <button onClick={()=> window.open("https://drive.google.com/file/d/11WdOSymu6ENjcJo9DSR5c4X4rNKxz0AY/view?usp=sharing", '_blank', 'noreferrer')} className="fontStyle button">View Resume</button> */}
-                </div>
-                <div className="imageContainer">
-                <img className="image" src={ProfilePic} alt=""/>
-                </div>
+                    <img alt="helloworld" className="astroIcon" src={AstronutStar} />
+                    <p className="fontStyle homeScreenfonts helloText"> Hello world 👋,</p>
+                    <p className="fontStyle homeScreenfonts name"> I'm Venkadesh S </p>
+                    <p className="fontStyle homeScreenfonts role">FRONT-END DEVELOPER</p>
+                    <p className="fontStyle homeScreenfonts self">A self-taught passionate Frontend developer from India</p>
+                    <div className="socialMediIcons">
+                        <img 
+                            className="socialIcon" 
+                            alt="linkedin" 
+                            src={Linkedin}
+                            onClick={()=>openInNewTab("https://www.linkedin.com/in/venkadesh-s-sakthivel")}
+                        />
+                        <img 
+                            className="socialIcon" 
+                            alt="github" 
+                            src={Github}
+                            onClick={()=>openInNewTab("https://github.com/Venkadeshkissflow")}
+                        />
+                        <img 
+                            onClick={()=>openInNewTab("https://twitter.com/Venkade20226949?t=ZEz7CgBuTKvxC6aI9hVmNA&s=09")}
+                            className="socialIcon" 
+                            alt="twitter" 
+                            src={Twitter}
+                        />
+                        <img 
+                            onClick={() => window.location = 'mailto:venkadeshsakthivel03@gmail.com.com'}
+                            className="socialIcon" 
+                            alt="mail" 
+                            src={Mail}
+                        />
+                    </div>
+                    <div onClick={()=> openInNewTab("https://www.canva.com/design/DAGRqVavyD0/uDd8xYdneuNZ1HcNrswCeA/view?utm_content=DAGRqVavyD0&utm_campaign=designshare&utm_medium=link&utm_source=editor")} className="resume">Resume</div>
             </Card>
         </div>
     )

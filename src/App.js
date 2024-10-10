@@ -6,42 +6,11 @@ import {THEME, THEME_LOCATION, SCREEN} from "./constant.js"
 import './App.css';
 
 import {HomeScreen} from "../src/screens/homescreen/index";
-import {AboutScreen} from "../src/screens/aboutscreen/index";
-import {HeaderComponent} from "../src/components/header/index";
-import {ContactScreen} from "../src/screens/contacts/index";
+import {SkillSet} from "../src/screens/skillset/index";
+import {Experiance} from "../src/screens/experiance/index.jsx"
 import {SelfExplore} from "../src/screens/Acheivements_and_hobbies/index";
+import {ProjectSection} from "../src/screens/projects/index.jsx"
 
-
-function BackgroundImage({theme}){
-  return(
-    <>
-        <div 
-           className={`
-           ${THEME_LOCATION.FOREST} 
-           ${theme !== THEME_LOCATION.FOREST ? "removed" : "live" } 
-           backgroundImage
-        `}/>
-         <div 
-         className={`
-         ${THEME_LOCATION.HIMALAYAS} 
-         ${theme !== THEME_LOCATION.HIMALAYAS ? "removed" : "live" } 
-         backgroundImage
-         `}/>
-             <div 
-         className={`
-         ${THEME_LOCATION.OCEAN} 
-         ${theme !== THEME_LOCATION.OCEAN ? "removed" : "live" } 
-         backgroundImage
-         `}></div>
-             <div 
-         className={`
-         ${THEME_LOCATION.DESERT}
-         ${theme !== THEME_LOCATION.DESERT ? "removed" : "live" }  
-         backgroundImage
-         `}></div>
-    </>
-  )
-}
 
 function App() {
     const swiperRef = useRef(null);
@@ -59,9 +28,9 @@ function App() {
 
     const WEB_MIN_WIDTH = 550;
     useLayoutEffect(()=>{
-       let mobileResolution = swiperRef.current.clientWidth < WEB_MIN_WIDTH;
-       setMobileResolution(mobileResolution)
+      bodyContainer.classList.add(THEME.DARK);
     }, [])
+
 
 
     function SetThemeEvent(theme){
@@ -91,28 +60,13 @@ function App() {
   return (
     <div ref={swiperRef} className={`App`}>
       <div className="screensWrapper">
-      <HeaderComponent
-        screenNavigations={screenNavigations}
-        mobileResolution={mobileResolution}
-      />
       <HomeScreen ref={homeRef} />
-      <AboutScreen ref={aboutRef} />
+      <SkillSet ref={aboutRef} />
+      <ProjectSection />
+      <Experiance />
       <SelfExplore ref={acheivementsRef} mobileResolution={mobileResolution} />
-      <ContactScreen ref={contactRef} mobileResolution={mobileResolution} />
       </div>
-        <div className={`moonImage ${theme === THEME.LIGHT ? "moonSetDown" : "moonSetUp"}`}></div>
-        <div className={`sun ${theme === THEME.LIGHT ? "sunSet" : "sunSetDown"}`}/>
-        <BackgroundImage theme={location} />
-        <div className="themeContainer">
-        <div className="themeSwitch">
-            <div id="forest" className="theme1 themeBox" onClick={()=>SetThemeEvent(THEME_LOCATION.FOREST)}/>
-            <div id="himalayas" className="theme2 themeBox" onClick={()=>SetThemeEvent(THEME_LOCATION.DESERT)}/>
-            <div className="theme3 themeBox" onClick={()=>SetThemeEvent(THEME_LOCATION.HIMALAYAS)}/>
-            <div className="theme4 themeBox" onClick={()=>SetThemeEvent(THEME_LOCATION.OCEAN)}/>
-            <div className="centrPart" />
-        </div>
-          <p className="fontStyle themeFontStyle">change theme</p>
-        </div>
+        <div className={"moonImage moonSetUp"}></div>
     </div>
   );
 }

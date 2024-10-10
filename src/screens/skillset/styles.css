@@ -1,0 +1,62 @@
+.skillsWrapper {
+    background-size: cover;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(3, 250px);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+    padding-top: 10rem;
+}
+
+.skillset {
+    height: 120px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: visible;
+}
+
+.skillIcon {
+    height: 50%;
+    width: 50%;
+    fill: aliceblue;
+}
+
+.skillset.reactjs:hover > *{
+    fill: #01fffe;
+    color: #01fffe
+}
+
+.skillset.js:hover > * {
+    fill: #ffc901;
+    color: #ffc901;
+}
+
+.skillset.html:hover > * {
+    fill: #de4a25;
+    color: #de4a25;
+}
+.skillset.css:hover > * {
+    fill: #244bdd;
+    color: #244bdd;
+}
+.skillset.tailwind:hover > * {
+    fill: #19b2b7;
+    color: #19b2b7;
+}
+.skillset.node:hover > * {
+    fill: #74b25a;
+    color: #74b25a;
+}
+
+.skillFont {
+    font-size: 20px;
+}
+
+.astroStudy {
+    position: absolute;
+    height: 200px;
+    top: -145px
+}

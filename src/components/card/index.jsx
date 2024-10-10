@@ -11,17 +11,8 @@ export function Card({children, className}){
     const [props, set] = useSpring(()=>({xys: [0, 0, 1], config: {mass: 10, friction: 50, tension: 200}}))
 
     return (
-        <animated.div
-        onMouseMove={({clientX, clientY})=>set({xys: calc(clientX, clientY)})}
-        onMouseLeave={()=>set({xys: [0,0,1]})}
-        style={{
-            transform: props.xys.to(trans)
-        }}
-         className={`Card ${className}`}>
-            {/* <StyledSpan/> */}
+        <div className={`Card ${className}`}>
             {children}
-            <div
-             className="highlight"></div>
-        </animated.div>
+        </div>
     )
 }

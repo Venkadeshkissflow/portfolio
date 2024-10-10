@@ -9,13 +9,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Snowfall
+    {/* <Snowfall
             style={{
                 position: 'fixed',
                 width: '100vw',
                 height: '100vh'
             }}
-        />
+        /> */}
   </React.StrictMode>
 );
 
