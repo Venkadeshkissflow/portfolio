@@ -11,6 +11,9 @@ import "./styles.css";
 import "../../commonstyle.css"
 
 export const HomeScreen = React.forwardRef((props, ref) => {
+    function openInNewTab(url){
+        window.open(url, '_blank', 'noreferrer');
+    }
     return(
         <div ref={ref} className="homeScrean">
             <Card className="homeScreenCard">
