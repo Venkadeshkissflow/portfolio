@@ -8,7 +8,6 @@ import './App.css';
 import {HomeScreen} from "../src/screens/homescreen/index";
 import {SkillSet} from "../src/screens/skillset/index";
 import {Experiance} from "../src/screens/experiance/index.jsx"
-import {HeaderComponent} from "../src/components/header/index";
 import {SelfExplore} from "../src/screens/Acheivements_and_hobbies/index";
 import {ProjectSection} from "../src/screens/projects/index.jsx"
 
@@ -29,9 +28,9 @@ function App() {
 
     const WEB_MIN_WIDTH = 550;
     useLayoutEffect(()=>{
-       let mobileResolution = swiperRef.current.clientWidth < WEB_MIN_WIDTH;
-       setMobileResolution(mobileResolution)
+      bodyContainer.classList.add(THEME.DARK);
     }, [])
+
 
 
     function SetThemeEvent(theme){
@@ -61,18 +60,13 @@ function App() {
   return (
     <div ref={swiperRef} className={`App`}>
       <div className="screensWrapper">
-      <HeaderComponent
-        screenNavigations={screenNavigations}
-        mobileResolution={mobileResolution}
-      />
       <HomeScreen ref={homeRef} />
       <SkillSet ref={aboutRef} />
       <ProjectSection />
       <Experiance />
       <SelfExplore ref={acheivementsRef} mobileResolution={mobileResolution} />
       </div>
-        <div className={`moonImage ${theme === THEME.LIGHT ? "moonSetDown" : "moonSetUp"}`}></div>
-        <div className={`sun ${theme === THEME.LIGHT ? "sunSet" : "sunSetDown"}`}/>
+        <div className={"moonImage moonSetUp"}></div>
     </div>
   );
 }
